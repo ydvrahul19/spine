@@ -114,12 +114,13 @@ ul { list-style:none; }
   background:#ffffff;
   box-shadow: 0 2px 20px rgba(14,127,171,0.08);
   transition: box-shadow .3s;
+  overflow: visible;
 }
 .nav-inner {
   max-width:1320px; margin:0 auto;
   display:flex; align-items:center; justify-content:space-between;
-  padding:0 4%; height:105px;
-  gap: 20px;
+  padding:0 4%; height:120px;
+  gap: 20px; overflow:visible;
 }
 .nav-logo { display:flex; flex-direction:column; align-items:center; text-align:center; gap:2px; text-decoration:none; flex-shrink:0; }
 .logo-circle {
@@ -181,7 +182,7 @@ ul { list-style:none; }
 .hamburger:hover { background:var(--navy); }
 
 /* ===== PAGES ===== */
-.page { display:none; padding-top:105px; }
+.page { display:none; padding-top:120px; }
 .page.active { display:block; }
 
 /* ===== PAGE HEADER ===== */
@@ -197,7 +198,7 @@ ul { list-style:none; }
 .hero-section {
   min-height:100vh; display:flex; align-items:center;
   background:linear-gradient(135deg,#0a3d55 0%,#0E7FAB 50%,#1ABC9C 100%);
-  position:relative; overflow:hidden; padding-top:105px;
+  position:relative; overflow:hidden; padding-top:120px;
 }
 .hero-bg-orb {
   position:absolute; border-radius:50%;
@@ -873,7 +874,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   .ps-arrow { display:none; }
 }
 @media (max-width:768px) {
-  .nav-links { display:none; flex-direction:column; position:absolute; top:80px; left:0; right:0; background:white; padding:1rem 5%; box-shadow:0 10px 30px rgba(0,0,0,.1); gap:0; }
+  .nav-links { display:none; flex-direction:column; position:absolute; top:120px; left:0; right:0; background:white; padding:1rem 5%; box-shadow:0 10px 30px rgba(0,0,0,.1); gap:0; }
   .nav-links.open { display:flex; }
   .hamburger { display:flex; }
   .hero-content { grid-template-columns:1fr; padding:60px 5%; }
@@ -897,8 +898,8 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 
 /* ===== LOGO STYLES ===== */
 .nav-logo-img {
-  width: 70px; height: 70px;
-  border-radius: 14px;
+  width: 80px; height: 80px;
+  border-radius: 16px;
   object-fit: cover;
   border: none;
   box-shadow: 0 2px 10px rgba(14,127,171,0.12);
@@ -1466,7 +1467,7 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 768px) {
   #navbar { padding: 0 16px; }
   .nav-inner { gap: 8px; }
-  .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0;
+  .nav-links { display: none; position: fixed; top: 120px; left: 0; right: 0;
     background: white; flex-direction: column; padding: 20px 24px;
     box-shadow: 0 12px 40px rgba(26,188,156,.14); z-index: 998;
     border-top: 2px solid rgba(26,188,156,.1); gap: 4px; }
