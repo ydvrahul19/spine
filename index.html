@@ -574,7 +574,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 
 /* ===== CHATBOT FLOAT ===== */
 .chat-float {
-  position:fixed; bottom:172px; right:28px; z-index:999;
+  position:fixed; bottom:28px; right:96px; z-index:999;
   width:56px; height:56px; background:var(--navy); border-radius:50%;
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 6px 24px rgba(91,45,142,.45); transition:transform .3s;
@@ -592,7 +592,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 
 /* ===== CHATBOT WINDOW ===== */
 .chatbot-window {
-  position:fixed; bottom:244px; right:28px; z-index:1000;
+  position:fixed; bottom:100px; right:28px; z-index:1000;
   width:360px; height:520px;
   background:white; border-radius:20px;
   box-shadow:0 20px 60px rgba(91,45,142,.22);
@@ -702,7 +702,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   .chatbot-window { width:calc(100vw - 24px); right:12px; bottom:90px; }
   .call-float { right:12px !important; bottom:100px !important; }
   .wa-float { right:12px !important; bottom:28px !important; }
-  .chat-float { right:12px !important; bottom:172px !important; }
+  .chat-float { right:80px !important; bottom:28px !important; }
 }
 
 
@@ -1663,7 +1663,7 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 480px) {
   .scroll-top { bottom: 80px; right: 12px; width: 40px; height: 40px; font-size: 1rem; }
   .wa-float { right:12px !important; bottom:28px !important; }
-  .chat-float { right:12px !important; bottom:172px !important; }
+  .chat-float { right:80px !important; bottom:28px !important; }
 }
 
 
@@ -1922,14 +1922,14 @@ img { max-width: 100%; height: auto; }
   position: relative;
   width: 400px; height: 540px;
   border-radius: 180px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 30px 80px rgba(91,45,142,0.4), 0 8px 24px rgba(0,0,0,0.1);
   z-index: 1;
   flex-shrink: 0;
 }
 
 /* slides */
-.hero-slides { width: 100%; height: 100%; position: relative; }
+.hero-slides { width: 100%; height: 100%; position: relative; border-radius: 180px; overflow: hidden; }
 .hero-slide {
   position: absolute; inset: 0;
   opacity: 0; transition: opacity 0.8s ease;
@@ -1973,15 +1973,17 @@ img { max-width: 100%; height: auto; }
   transition: all 0.3s ease;
 }
 .oval-badge-top {
-  top: 30px; left: -40px;
-  background: linear-gradient(135deg,#7B4BB8,#7B4BB8);
+  top: 20px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg,#7B4BB8,#9B6FD4);
   color: white;
   animation: float 3.5s ease-in-out infinite;
+  z-index: 5;
 }
 .oval-badge-bot {
-  bottom: 30px; left: -30px;
+  bottom: 20px; left: 50%; transform: translateX(-50%);
   border: 2px solid #7B4BB8; color: #7B4BB8;
   animation: float 3.5s ease-in-out infinite 1s;
+  z-index: 5;
 }
 
 /* ── SLIDE CONTENT DATA (left panel transitions) ── */
@@ -2008,8 +2010,8 @@ img { max-width: 100%; height: auto; }
   .hero-oval-wrap { width: 280px; height: 380px; }
   .hero-oval-pill { width: 300px; height: 410px; }
   .hero-sub { margin: 0 auto 2rem; }
-  .oval-badge-top { left: -10px; }
-  .oval-badge-bot { left: -10px; }
+  .oval-badge-top { left: 50%; transform: translateX(-50%); }
+  .oval-badge-bot { left: 50%; transform: translateX(-50%); }
 }
 @media (max-width: 480px) {
   .hero-oval-wrap { width: 240px; height: 320px; }
@@ -2022,6 +2024,7 @@ img { max-width: 100%; height: auto; }
   position: absolute;
   right: 66px;
   top: 50%; transform: translateY(-50%);
+  font-size: 0.72rem;
   background: rgba(30,18,40,0.85);
   color: white; font-size: 0.72rem; font-weight: 600;
   padding: 4px 10px; border-radius: 20px;
