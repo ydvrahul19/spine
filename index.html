@@ -1456,6 +1456,130 @@ img { max-width: 100%; height: auto; }
   .wa-float { right: 12px !important; bottom: 16px !important; }
 }
 
+
+/* ===== DR. HIREN PROFILE SECTION ===== */
+.dr-profile-section {
+  padding: 100px 5%;
+  background: linear-gradient(160deg, #f8fbff 0%, #f0f7f4 100%);
+  position: relative; overflow: hidden;
+}
+.dr-profile-section::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(93,184,232,0.07), transparent 70%);
+  pointer-events: none;
+}
+.dr-profile-inner {
+  display: flex; gap: 64px; align-items: flex-start;
+}
+.dr-photo-col { flex: 0 0 360px; }
+.dr-info-col  { flex: 1; min-width: 0; }
+
+.dr-photo-wrap {
+  position: relative; border-radius: 24px; overflow: visible;
+}
+.dr-photo-img {
+  width: 100%; aspect-ratio: 4/5; object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(26,46,74,0.18);
+  display: block;
+  transition: transform 0.5s ease;
+}
+.dr-photo-wrap:hover .dr-photo-img { transform: scale(1.02); }
+
+.dr-photo-badge {
+  position: absolute; bottom: 24px; left: -20px;
+  background: white;
+  border-radius: 16px; padding: 14px 20px;
+  box-shadow: 0 8px 30px rgba(26,46,74,0.18);
+  text-align: center; border: 2px solid rgba(93,184,232,0.2);
+  animation: float 4s ease-in-out infinite;
+}
+.dpb-num {
+  font-size: 1.8rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--blue), var(--sky));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1;
+}
+.dpb-lbl { font-size: 0.72rem; color: var(--muted); font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: .5px; }
+
+.dr-photo-tag {
+  position: absolute; top: 20px; right: -14px;
+  background: linear-gradient(135deg, var(--green), var(--mint));
+  color: white; font-size: 0.78rem; font-weight: 700;
+  padding: 8px 16px; border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(45,106,79,0.35);
+}
+
+.dr-subtitle {
+  color: var(--sky); font-weight: 600; font-size: 1rem;
+  margin: -0.5rem 0 1.2rem; letter-spacing: .3px;
+}
+.dr-bio {
+  color: var(--muted); font-size: 0.95rem; line-height: 1.8;
+}
+
+/* Qualifications */
+.dr-quals { margin-top: 1.8rem; }
+.dr-quals-title {
+  font-size: 0.9rem; font-weight: 700; color: var(--navy);
+  margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .5px;
+}
+.dr-qual-list { display: flex; flex-direction: column; gap: 10px; }
+.dr-qual-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: white; border-radius: 12px; padding: 12px 16px;
+  border: 1px solid rgba(26,46,74,.07);
+  box-shadow: 0 2px 10px rgba(26,46,74,.05);
+  transition: all 0.3s ease;
+}
+.dr-qual-item:hover { transform: translateX(6px); border-color: rgba(93,184,232,0.3); box-shadow: 0 4px 20px rgba(26,46,74,.1); }
+.dqi-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--sky));
+  flex-shrink: 0; margin-top: 6px;
+}
+.dr-qual-item strong { display: block; font-size: 0.875rem; color: var(--navy); font-weight: 700; }
+.dr-qual-item span   { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+/* Dr stats */
+.dr-stats-row {
+  display: flex; gap: 24px; margin-top: 1.8rem; flex-wrap: wrap;
+}
+.dr-stat {
+  text-align: center; padding: 16px 20px;
+  background: white; border-radius: 14px;
+  border: 1px solid rgba(26,46,74,.08);
+  box-shadow: 0 4px 16px rgba(26,46,74,.07);
+  flex: 1; min-width: 80px;
+  transition: all 0.3s ease;
+}
+.dr-stat:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(26,46,74,.12); }
+.drs-num {
+  font-size: 1.5rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--blue), var(--sky));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.drs-lbl { font-size: 0.72rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .4px; margin-top: 2px; }
+
+/* Dr profile responsive */
+@media (max-width: 1024px) {
+  .dr-profile-inner { gap: 40px; }
+  .dr-photo-col { flex: 0 0 280px; }
+}
+@media (max-width: 768px) {
+  .dr-profile-inner { flex-direction: column; }
+  .dr-photo-col { flex: none; width: 100%; max-width: 340px; margin: 0 auto; }
+  .dr-photo-badge { left: 0; bottom: 16px; }
+  .dr-stats-row { justify-content: center; }
+}
+@media (max-width: 480px) {
+  .dr-qual-item { padding: 10px 12px; }
+  .dr-stats-row { gap: 12px; }
+  .dr-stat { padding: 12px 14px; }
+}
+
 </style>
 </head>
 <body>
@@ -1509,9 +1633,9 @@ img { max-width: 100%; height: auto; }
     <div class="hero-bg-orb orb3"></div>
     <div class="hero-content">
       <div class="hero-left" data-aos="fade-right">
-        <div class="hero-badge">🏥 Gandhinagar's Premier Spine Care</div>
+        <div class="hero-badge">🏥 Gandhinagar's Premier Spine & Physio Clinic</div>
         <h1 class="hero-title">Relieve Pain.<br><span class="gradient-text">Restore Motion.</span><br>Reclaim Life.</h1>
-        <p class="hero-sub">Advanced physiotherapy and spine rehabilitation at The Spine Centre, Niramay Medical Hub, Sector 6, Gandhinagar. Evidence-based treatments by expert clinicians.</p>
+        <p class="hero-sub">Non-surgical solutions for back pain, neck strain, and joint issues — led by Dr. Hiren Dacha (MPT, Sports Medicine) at The Spine Centre, Niramay Medical Hub, Sector 6, Gandhinagar.</p>
         <div class="hero-btns">
           <a href="#" onclick="showPage('booking');return false;" class="btn-primary">📅 Book Appointment</a>
           <a href="https://wa.me/919712155905?text=Hello%20The%20Spine%20Centre!" target="_blank" class="btn-ghost">💬 WhatsApp Us</a>
@@ -1519,7 +1643,7 @@ img { max-width: 100%; height: auto; }
         <div class="hero-stats">
           <div class="stat-item"><span class="stat-n">5000+</span><span class="stat-l">Patients Treated</span></div>
           <div class="stat-divider"></div>
-          <div class="stat-item"><span class="stat-n">10+</span><span class="stat-l">Years Experience</span></div>
+          <div class="stat-item"><span class="stat-n">5+</span><span class="stat-l">Years Experience</span></div>
           <div class="stat-divider"></div>
           <div class="stat-item"><span class="stat-n">92%</span><span class="stat-l">Success Rate</span></div>
         </div>
@@ -1577,7 +1701,7 @@ img { max-width: 100%; height: auto; }
           <img src="images/physio2.png" alt="Spine Treatment" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="qi-stat-float">
-          <div class="qsf-n">13+</div>
+          <div class="qsf-n">5+</div>
           <div class="qsf-l">Years of Experience</div>
         </div>
       </div>
@@ -1593,7 +1717,7 @@ img { max-width: 100%; height: auto; }
         <div class="quality-bottom-stats">
           <div class="qbs-item">
             <div class="qbs-icon">👨‍⚕️</div>
-            <div><span class="qbs-n">10+</span><span class="qbs-l">Skilled Therapists</span></div>
+            <div><span class="qbs-n">5+</span><span class="qbs-l">Skilled Therapists</span></div>
           </div>
           <div class="qbs-item">
             <div class="qbs-icon">🏥</div>
@@ -1622,7 +1746,7 @@ img { max-width: 100%; height: auto; }
         <div class="mva-card" data-aos="fade-up" data-aos-delay="100">
           <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#2b7cbf" stroke-width="1.5"/><circle cx="14" cy="14" r="4" fill="#2b7cbf" opacity=".3"/><path d="M14 4V8M14 20V24M4 14H8M20 14H24" stroke="#2b7cbf" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Our Vision</h3>
-          <p>To be the most trusted centre for integrated care by combining advanced physiotherapy and expert chiropractic services. We aim to redefine wellness through innovation, human connection, and whole-person healing.</p>
+          <p>To be Gandhinagar's most trusted centre for spine health and sports rehabilitation — where cutting-edge international techniques meet genuine, patient-centred compassionate care.</p>
         </div>
         <div class="mva-card" data-aos="fade-up" data-aos-delay="200">
           <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22L14 6L22 22" stroke="#2b7cbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 17H19" stroke="#2b7cbf" stroke-width="1.5" stroke-linecap="round"/></svg></div>
@@ -1936,35 +2060,57 @@ img { max-width: 100%; height: auto; }
   <div class="page-header">
     <div class="ph-breadcrumb"><a href="#" onclick="showPage('home');return false;" style="color:rgba(255,255,255,.6);text-decoration:none">Home</a> <span style="margin:0 8px;opacity:.4">/</span> <span>About Us</span></div>
     <h1>About The Spine Centre</h1>
-    <p>A trusted name in physiotherapy and spine care in Gandhinagar, Gujarat.</p>
+    <p>Led by Dr. Hiren Dacha (MPT, Sports Medicine) — Gandhinagar's specialist in non-surgical spine &amp; sports rehabilitation.</p>
   </div>
 
-  <!-- COMPASSIONATE CARE (Screenshot 3) -->
-  <section class="compassionate-section">
-    <div class="comp-inner max-wrap">
-      <div class="comp-left" data-aos="fade-right">
-        <div class="comp-img-wrap">
-          <div class="comp-img-main" style="overflow:hidden">
-            <img src="images/craniosacral.png" alt="Our Clinic" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <!-- DR. HIREN PROFILE SECTION -->
+  <section class="dr-profile-section">
+    <div class="max-wrap dr-profile-inner">
+
+      <!-- LEFT: Photo -->
+      <div class="dr-photo-col" data-aos="fade-right">
+        <div class="dr-photo-wrap">
+          <img src="images/physio1.png" alt="Dr. Hiren Dacha – The Spine Centre" class="dr-photo-img">
+          <div class="dr-photo-badge">
+            <div class="dpb-num">5+</div>
+            <div class="dpb-lbl">Years of<br>Experience</div>
           </div>
-          <div class="comp-img-badge">
-            <div class="cib-num">10+</div>
-            <div class="cib-label">Years of Excellence</div>
+          <div class="dr-photo-tag">
+            <span>🏅 GPC: 11023</span>
           </div>
         </div>
       </div>
-      <div class="comp-right" data-aos="fade-left">
-        <div class="section-pill">Solution Tailored To Your Recovery</div>
-        <h2 class="section-title">We Proudly <span class="color-green">Deliver</span> Quality, <span class="color-navy">Compassionate Care</span></h2>
-        <p class="section-desc">At The Spine Centre, every treatment is driven by clinical expertise and genuine care. From pain relief and movement restoration, we focus on real outcomes that matter. Our team works closely with you to ensure faster recovery, lasting results, and a truly supportive experience.</p>
-        <ul class="comp-checks">
-          <li><span class="cc-dot"></span> Custom Plans For Every Concern</li>
-          <li><span class="cc-dot"></span> Proven, Effective Treatment Methods</li>
-          <li><span class="cc-dot"></span> A Team That Puts You First</li>
-          <li><span class="cc-dot"></span> LGBTQ+ Friendly &amp; Inclusive</li>
-        </ul>
-        <a href="#" onclick="showPage('booking');return false;" class="btn-primary">Book a Consultation</a>
+
+      <!-- RIGHT: Details -->
+      <div class="dr-info-col" data-aos="fade-left">
+        <div class="section-pill">Meet Your Specialist</div>
+        <h2 class="section-title">Dr. Hiren Dacha <span class="color-green">MPT</span></h2>
+        <p class="dr-subtitle">Sports Medicine Physiotherapist &amp; Spine Specialist · Gandhinagar</p>
+        <p class="dr-bio">With over 5 years of dedicated clinical practice in Gandhinagar, Dr. Hiren Dacha has built a reputation for delivering non-surgical, evidence-based solutions for chronic pain, sports injuries, and complex spine conditions. His unique combination of internationally trained techniques and compassionate care has helped hundreds of patients regain mobility and live pain-free.</p>
+        <p class="dr-bio" style="margin-top:0.75rem">At The Spine Centre, Dr. Hiren brings together manual therapy, chiropractic adjustments, and functional rehabilitation into a personalised treatment plan — designed around each patient's specific goals and condition.</p>
+
+        <!-- Qualifications -->
+        <div class="dr-quals">
+          <h4 class="dr-quals-title">🎓 Qualifications &amp; Certifications</h4>
+          <div class="dr-qual-list">
+            <div class="dr-qual-item"><span class="dqi-dot"></span><div><strong>BPT &amp; MPT – Sports Medicine</strong><span>Bachelor &amp; Master of Physiotherapy</span></div></div>
+            <div class="dr-qual-item"><span class="dqi-dot"></span><div><strong>COMT Spine</strong><span>Certified Orthopaedic Manual Therapist – Spine</span></div></div>
+            <div class="dr-qual-item"><span class="dqi-dot"></span><div><strong>Spinal &amp; Peripheral Osteopathic Manipulations</strong><span>International Training – United Kingdom 🇬🇧</span></div></div>
+            <div class="dr-qual-item"><span class="dqi-dot"></span><div><strong>Functional Neuroleptic Techniques</strong><span>Advanced Certification – Switzerland 🇨🇭</span></div></div>
+            <div class="dr-qual-item"><span class="dqi-dot"></span><div><strong>Dynamic Neuromuscular Assessment</strong><span>Specialty Training – USA 🇺🇸</span></div></div>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div class="dr-stats-row">
+          <div class="dr-stat"><div class="drs-num">5+</div><div class="drs-lbl">Years Practice</div></div>
+          <div class="dr-stat"><div class="drs-num">500+</div><div class="drs-lbl">Patients Treated</div></div>
+          <div class="dr-stat"><div class="drs-num">5</div><div class="drs-lbl">Int'l Certifications</div></div>
+        </div>
+
+        <a href="#" onclick="showPage('booking');return false;" class="btn-primary" style="margin-top:1.5rem;display:inline-flex">Book with Dr. Hiren →</a>
       </div>
+
     </div>
   </section>
 
@@ -1977,26 +2123,26 @@ img { max-width: 100%; height: auto; }
         <div class="ps-step" data-aos="fade-up" data-aos-delay="0">
           <div class="ps-circle ps-c1"><span>👥</span></div>
           <div class="ps-arrow">- - - →</div>
-          <h4>Get Paired With A Therapist</h4>
-          <p>We carefully match you with a certified physiotherapist based on your condition, goals, and preferences.</p>
+          <h4>Detailed Assessment</h4>
+          <p>A thorough clinical evaluation of your condition, history, and goals — to build the most accurate picture before any treatment begins.</p>
         </div>
         <div class="ps-step" data-aos="fade-up" data-aos-delay="100">
-          <div class="ps-circle ps-c2"><span>📋</span></div>
+          <div class="ps-circle ps-c2"><span>🙌</span></div>
           <div class="ps-arrow">- - - →</div>
-          <h4>Choose Your Preferred Way To Receive Care</h4>
-          <p>Whether in-clinic or at home, we offer flexible treatment delivery that fits your schedule and comfort.</p>
+          <h4>Hands-On Treatment</h4>
+          <p>Targeted manual therapy, chiropractic adjustments, or specialised techniques — delivered personally by Dr. Hiren Dacha.</p>
         </div>
         <div class="ps-step" data-aos="fade-up" data-aos-delay="200">
-          <div class="ps-circle ps-c3"><span>📈</span></div>
+          <div class="ps-circle ps-c3"><span>📋</span></div>
           <div class="ps-arrow">- - - →</div>
-          <h4>We Help You Get Better, Faster!</h4>
-          <p>Our evidence-based methods and personalized plans ensure measurable results in the shortest time possible.</p>
+          <h4>Tailored Rehabilitation Protocol</h4>
+          <p>A personalised exercise and recovery programme designed specifically for your body, condition, and lifestyle.</p>
         </div>
         <div class="ps-step" data-aos="fade-up" data-aos-delay="300">
-          <div class="ps-circle ps-c4"><span>💡</span></div>
+          <div class="ps-circle ps-c4"><span>🏃</span></div>
           <div class="ps-arrow"></div>
-          <h4>What Physiotherapy Can Help With</h4>
-          <p>We support patients with stress, trauma, or neurological recovery needs through integrated wellness therapies.</p>
+          <h4>Return to Active Life</h4>
+          <p>Ongoing support, progress tracking, and preventive guidance to keep you strong, mobile, and pain-free long term.
         </div>
       </div>
     </div>
@@ -2011,7 +2157,7 @@ img { max-width: 100%; height: auto; }
         <div class="mva-card" data-aos="fade-up" data-aos-delay="0">
           <div class="mva-card-icon">🎯</div>
           <h3>Our Mission</h3>
-          <p>To deliver evidence-based, personalized care in physiotherapy and chiropractic that empowers individuals and families to live healthier, more fulfilling lives. Whether it's relieving chronic pain or improving spinal alignment — we're committed to your unique journey.</p>
+          <p>To empower patients to lead active, pain-free lives through specialised therapeutic techniques, compassionate care, and non-surgical solutions — tailored to each person's unique needs and recovery goals.</p>
         </div>
         <div class="mva-card" data-aos="fade-up" data-aos-delay="100">
           <div class="mva-card-icon">🔭</div>
@@ -2021,7 +2167,7 @@ img { max-width: 100%; height: auto; }
         <div class="mva-card" data-aos="fade-up" data-aos-delay="200">
           <div class="mva-card-icon">💡</div>
           <h3>Our Approach</h3>
-          <p>We focus on root-cause solutions. From hands-on physiotherapy to precise chiropractic adjustments — our care is deeply personalized, research-driven, and results-focused. Every treatment is designed for long-term progress, not quick fixes.</p>
+          <p>We combine manual chiropractic adjustments with evidence-based physiotherapy — treating the root cause, not just symptoms. Every plan integrates modern technology and Dr. Hiren's internationally certified skills for faster, lasting recovery.</p>
         </div>
       </div>
     </div>
@@ -2045,7 +2191,7 @@ img { max-width: 100%; height: auto; }
           <div class="qcheck"><div class="qc-dot"></div><p>Evidence-based approach with customized plans for each patient's unique condition.</p></div>
         </div>
         <div class="quality-bottom-stats">
-          <div class="qbs-item"><div class="qbs-icon">👨‍⚕️</div><div><span class="qbs-n">10+</span><span class="qbs-l">Skilled Therapists</span></div></div>
+          <div class="qbs-item"><div class="qbs-icon">👨‍⚕️</div><div><span class="qbs-n">5+</span><span class="qbs-l">Skilled Therapists</span></div></div>
           <div class="qbs-item"><div class="qbs-icon">🏥</div><div><span class="qbs-n">1</span><span class="qbs-l">Location</span></div></div>
           <div class="qbs-item"><div class="qbs-icon">⭐</div><div><span class="qbs-n">5000+</span><span class="qbs-l">Success Stories</span></div></div>
         </div>
@@ -2076,7 +2222,7 @@ img { max-width: 100%; height: auto; }
       <div class="shs-left" data-aos="fade-right">
         <div class="shs-img">
           <img src="images/alignment.png" alt="Chiropractic Care" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:20px;">
-          <div class="shs-badge"><div class="sb-num">13+</div><div class="sb-label">Years of Experience</div></div>
+          <div class="shs-badge"><div class="sb-num">5+</div><div class="sb-label">Years of Experience</div></div>
         </div>
       </div>
       <div class="shs-right" data-aos="fade-left">
