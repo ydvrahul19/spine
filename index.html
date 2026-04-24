@@ -4070,7 +4070,7 @@ img { max-width: 100%; height: auto; }
   </a>
 
   <!-- Child: Chat -->
-  <button class="fab-child fab-chat" onclick="toggleChat();closeFab();" title="Chat with us" id="chatFloatBtn">
+  <button class="fab-child fab-chat" onclick="toggleChat();" title="Chat with us" id="chatFloatBtn">
     <div class="chat-float-badge" id="chatBadge">?</div>
     <svg viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
     <span class="fab-child-label">Chat</span>
@@ -4144,6 +4144,8 @@ function showPage(id) {
 
 // ===== FAB GROUP TOGGLE =====
 function toggleFab() {
+  // If chatbot is open, close it instead of opening FAB menu
+  if (chatOpen) { toggleChat(); return; }
   const group = document.getElementById('fabGroup');
   const trigger = document.getElementById('fabTrigger');
   const iconOpen = trigger.querySelector('.fab-icon-open');
@@ -4710,6 +4712,8 @@ function toggleChat() {
   const badge = document.getElementById('chatBadge');
   win.classList.toggle('open', chatOpen);
   if (chatOpen && badge) badge.style.display = 'none';
+  // Also close FAB when chat opens
+  if (chatOpen) closeFab();
 }
 
 function sendQuick(text) {
