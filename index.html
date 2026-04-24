@@ -2563,7 +2563,7 @@ img { max-width: 100%; height: auto; }
       <!-- LEFT: Photo -->
       <div class="dr-photo-col" data-aos="fade-right">
         <div class="dr-photo-wrap">
-          <img src="images/dr_clinic.png" alt="Dr. Hiren Dacha – The Spine Centre" class="dr-photo-img" style="object-position:top">
+          <img src="images/hiren_about.png" alt="Dr. Hiren Dacha – The Spine Centre" class="dr-photo-img" style="object-position:top;object-fit:cover;">
           <div class="dr-photo-badge">
             <div class="dpb-num">5</div>
             <div class="dpb-lbl">Int'l<br>Certifications</div>
@@ -3824,57 +3824,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ===== CHATBOT =====
-const SPINE_KNOWLEDGE = `You are the friendly, knowledgeable virtual assistant for The Spine Centre — a premier physiotherapy and chiropractic clinic in Gandhinagar, Gujarat, India.
+// ===== SMART CHATBOT — keyword-based local responses =====
 
-CLINIC INFO:
-- Name: The Spine Centre
-- Address: Niramay Medical Hub, Near GH-3 Circle, Sector 6, Gandhinagar 382006, Gujarat, India
-- Phone/WhatsApp: +91 97121 55905
-- Google Maps: https://maps.app.goo.gl/ZBrh1HeJFa8ir25aA
-- LGBTQ+ Friendly
+const BOT_RESPONSES = [
+  {
+    keys: ['service','treat','offer','provide','do you','therapy','therapies','what can'],
+    answer: `We offer a wide range of treatments at The Spine Centre:\n\n🦴 **Chiropractic Treatment** – spinal adjustments & posture correction\n💪 **Physiotherapy** – back/neck pain, post-surgical, neurological\n🏃 **Sports Rehabilitation** – ACL, rotator cuff, ankle sprains\n🧘 **Posture Correction** – for desk workers & rounded shoulders\n🧠 **Neurological Rehab** – Stroke, Parkinson's, nerve injuries\n⚡ **Electrotherapy** – TENS, IFT, Ultrasound\n🪡 **Dry Needling** & Trigger Point Release\n🤲 **Manual Therapy** & Osteopathic Manipulations\n🌀 **Craniosacral Therapy**\n🫧 **Cupping Therapy**\n\nAll treatments are personally delivered by Dr. Hiren Dacha (MPT, Sports Medicine). 😊`
+  },
+  {
+    keys: ['hour','time','open','close','timing','schedule','when','available','day','week','monday','tuesday','saturday','sunday'],
+    answer: `🕘 **Clinic Hours:**\n\n📅 **Monday – Friday:**\nMorning: 9:00 AM – 1:00 PM\nEvening: 4:00 PM – 7:30 PM\n\n📅 **Saturday – Sunday:**\nMorning: 9:00 AM – 1:30 PM\nEvening: 4:00 PM – 7:30 PM\n\nWalk-ins are welcome! For guaranteed slot, WhatsApp us at **+91 97121 55905** 📲`
+  },
+  {
+    keys: ['book','appointment','appoin','schedule','visit','consult','session','slot','reserve'],
+    answer: `📅 **Book Your Appointment**\n\nThe easiest way to book:\n\n📲 **WhatsApp:** https://wa.me/919712155905\n📞 **Call:** +91 97121 55905\n\nWalk-ins are also welcome during clinic hours! Just walk in and Dr. Hiren will take care of you. 😊`
+  },
+  {
+    keys: ['price','cost','fee','charge','rate','rupee','₹','rs','how much','affordable','payment'],
+    answer: `💰 **Pricing at The Spine Centre**\n\nFees vary based on the treatment type and session plan. We offer:\n- Single session rates\n- Treatment package deals\n- Personalised care plans\n\nFor exact current pricing, please contact us:\n📲 **WhatsApp:** +91 97121 55905\n📞 **Call:** +91 97121 55905\n\nWe believe quality care should be accessible to all! 🌟`
+  },
+  {
+    keys: ['doctor','dr','hiren','dacha','qualification','degree','certified','certificate','education','study','trained','experience','about doctor','who is'],
+    answer: `👨‍⚕️ **Dr. Hiren Dacha** — Founder & Lead Therapist\n\n🎓 **Qualifications:** BPT & MPT in Sports Medicine\n📋 **GPC Registration:** 11023\n⏳ **Experience:** 5+ years in Gandhinagar\n\n🌍 **International Certifications:**\n• COMT Spine – Certified Orthopaedic Manual Therapist\n• Spinal & Peripheral Osteopathic Manipulations (UK 🇬🇧)\n• Functional Neuroleptic Techniques (Switzerland 🇨🇭)\n• Dynamic Neuromuscular Assessment (USA 🇺🇸)\n\n**Specialties:** Chiropractic, Physiotherapy, Sports Rehab, Spine Care`
+  },
+  {
+    keys: ['location','address','where','find','clinic','centre','center','gandhinagar','sector','map','direction','navigate','reach','come'],
+    answer: `📍 **The Spine Centre Location**\n\nNiramay Medical Hub,\nNear GH-3 Circle, Sector 6,\n**Gandhinagar – 382006, Gujarat, India**\n\n🗺️ **Google Maps:** https://maps.app.goo.gl/ZBrh1HeJFa8ir25aA\n\n📞 Call us if you need help finding us: **+91 97121 55905**`
+  },
+  {
+    keys: ['back pain','backache','back ache','spine','spinal','lumbar','disc','slipped disc','herniated','sciatica','sciatic'],
+    answer: `🦴 **Back Pain & Spine Treatment**\n\nWe specialise in treating:\n• Lower Back Pain & Lumbar issues\n• Disc Protrusion / Herniated Disc\n• Sciatica & nerve-related leg pain\n• Spinal Stenosis\n• Spondylosis\n\n✅ Our approach: **non-surgical, evidence-based** spinal manipulation, manual therapy, and targeted rehabilitation.\n\nDr. Hiren has helped 5000+ patients recover from spine conditions.\n\n📲 **Book now:** +91 97121 55905`
+  },
+  {
+    keys: ['neck','cervical','shoulder','rotator','frozen','arm pain','upper back'],
+    answer: `💆 **Neck & Shoulder Treatment**\n\nWe treat:\n• Neck Pain & Cervical Spondylosis\n• Frozen Shoulder\n• Rotator Cuff injuries\n• Shoulder Impingement\n• Upper Back Tension\n\nUsing: Manual Therapy, Chiropractic Adjustments, Dry Needling, and targeted exercises. Most patients feel relief within **2–3 sessions**.\n\n📲 **Book a consultation:** +91 97121 55905`
+  },
+  {
+    keys: ['knee','acl','ligament','meniscus','leg','hip','ankle','foot','sports injury','athlete','run','football','cricket'],
+    answer: `🏃 **Sports Injury & Knee Rehabilitation**\n\nWe treat:\n• ACL / Ligament injuries\n• Meniscus tears\n• Knee Pain & Arthritis\n• Hip & Ankle injuries\n• Sports-related sprains\n• Return-to-sport rehabilitation\n\nDr. Hiren is a certified Sports Medicine specialist (MPT) — helping athletes recover faster and return stronger.\n\n📲 **Book your sports assessment:** +91 97121 55905`
+  },
+  {
+    keys: ['chiropractic','chiropractor','adjustment','crack','manipulation','pop','align','alignment'],
+    answer: `🦴 **Chiropractic Treatment at The Spine Centre**\n\nChiropractic care involves precise spinal adjustments to:\n✅ Relieve joint pain & stiffness\n✅ Correct posture & spinal alignment\n✅ Restore range of motion\n✅ Reduce nerve compression\n\nDr. Hiren is internationally trained in **Osteopathic Spinal Manipulations (UK)** and **COMT Spine** techniques.\n\nSafe, effective, and non-surgical. 😊\n\n📲 **Book:** +91 97121 55905`
+  },
+  {
+    keys: ['dry needling','needling','trigger point','needle','acupuncture'],
+    answer: `🪡 **Dry Needling & Trigger Point Therapy**\n\nDry needling is different from acupuncture — it targets **myofascial trigger points** (tight muscle knots) causing pain.\n\n✅ Relieves chronic muscle tension\n✅ Reduces referred pain\n✅ Improves mobility\n✅ Speeds up recovery\n\nPerformed by Dr. Hiren with precision and care.\n\n📲 **Enquire / Book:** +91 97121 55905`
+  },
+  {
+    keys: ['cupping','cup','suction'],
+    answer: `🫧 **Cupping Therapy**\n\nCupping uses suction cups to:\n✅ Improve blood circulation\n✅ Release deep muscle tension\n✅ Reduce pain and inflammation\n✅ Support recovery from injuries\n\nModern cupping is safe and effective, and is offered as part of Dr. Hiren's holistic treatment approach.\n\n📲 **Book a session:** +91 97121 55905`
+  },
+  {
+    keys: ['craniosacral','cranio','sacral','head','skull'],
+    answer: `🌀 **Craniosacral Therapy**\n\nA gentle, hands-on technique that works with the craniosacral system (brain, spinal cord, membranes, and fluid).\n\n✅ Relieves headaches & migraines\n✅ Reduces stress and anxiety\n✅ Helps with neck pain and TMJ issues\n✅ Supports neurological recovery\n\nDr. Hiren is trained in this specialised therapy.\n\n📲 **Book:** +91 97121 55905`
+  },
+  {
+    keys: ['posture','sitting','desk','office','hunch','slouch','rounded shoulder','forward head'],
+    answer: `🧘 **Posture Correction Programme**\n\nPerfect for:\n• Office workers & desk job professionals\n• Students with long study hours\n• People with rounded shoulders or forward head\n• Anyone with postural pain\n\nOur programme includes: postural assessment, targeted exercises, manual correction, and an ergonomic advice plan.\n\n📲 **Start your posture fix:** +91 97121 55905`
+  },
+  {
+    keys: ['stroke','parkinson','neurolog','nerve','brain','paralysis','palsy','ms','multiple sclerosis'],
+    answer: `🧠 **Neurological Rehabilitation**\n\nWe help patients recover from:\n• Stroke & brain injuries\n• Parkinson's Disease\n• Nerve injuries & neuropathy\n• Bell's Palsy\n• Multiple Sclerosis\n\nDr. Hiren's approach combines functional movement retraining, manual therapy, and evidence-based protocols to help you regain independence.\n\n📲 **Book a consultation:** +91 97121 55905`
+  },
+  {
+    keys: ['contact','phone','call','whatsapp','number','reach','email','social'],
+    answer: `📞 **Contact The Spine Centre**\n\n📲 **WhatsApp / Call:** +91 97121 55905\n🌐 **Website:** www.spineaction.com\n📍 Niramay Medical Hub, Sector 6, Gandhinagar\n\n🕘 **Hours:**\nMon–Fri: 9 AM–1 PM & 4–7:30 PM\nSat–Sun: 9 AM–1:30 PM & 4–7:30 PM\n\nOr just walk in — we're always happy to see you! 😊`
+  },
+  {
+    keys: ['hi','hello','hey','good morning','good afternoon','good evening','namaste','hii','helo'],
+    answer: `👋 **Hello! Welcome to The Spine Centre!**\n\nI'm your virtual assistant. I can help you with:\n\n• 🦴 Our services & treatments\n• 📅 Clinic timings & location\n• 👨‍⚕️ About Dr. Hiren Dacha\n• 📲 Booking an appointment\n• 💰 Pricing information\n\nWhat would you like to know? 😊`
+  },
+  {
+    keys: ['thank','thanks','thnk','thx','great','good','helpful','awesome','nice'],
+    answer: `😊 You're most welcome! We're always here to help.\n\nIs there anything else you'd like to know about The Spine Centre? We'd love to help you on your path to pain-free living! 🌟\n\n📲 For appointments: **+91 97121 55905**`
+  }
+];
 
-CLINIC HOURS:
-- Monday to Friday: 9:00 AM to 1:00 PM and 4:00 PM to 7:30 PM
-- Saturday to Sunday: 9:00 AM to 1:30 PM and 4:00 PM to 7:30 PM
-
-ABOUT DR. HIREN DACHA:
-- Qualifications: BPT and MPT in Sports Medicine
-- GPC Registration: 11023
-- Experience: 5+ years in Gandhinagar
-- Specialties: Chiropractic, Physiotherapy, Sports Rehabilitation, Spine Care
-- International Certifications:
-  * COMT Spine (Certified Orthopaedic Manual Therapist)
-  * Spinal and Peripheral Osteopathic Manipulations trained in UK
-  * Functional Neuroleptic Techniques certified in Switzerland
-  * Dynamic Neuromuscular Assessment from USA
-
-SERVICES:
-1. Chiropractic Treatment - spinal adjustments, posture correction, pain relief
-2. Physiotherapy - post-surgical rehab, sports injury, back and neck pain, neurological
-3. Sports Rehabilitation - ACL, rotator cuff, ankle sprains, return-to-sport
-4. Posture Correction - for desk workers, rounded shoulders
-5. Neurological Rehabilitation - Stroke, Parkinson's, nerve injuries
-6. Post-Surgical Rehabilitation
-7. Electrotherapy - TENS, IFT, Ultrasound
-8. Dry Needling and Trigger Point Release
-9. Manual Therapy
-10. Craniosacral Therapy
-11. Cupping Therapy
-12. Osteopathic Manipulations
-
-CONDITIONS TREATED:
-Neck Pain, Shoulder Pain, Hip Pain, Knee Pain, Elbow Pain, Hand Pain, Foot Pain, Ankle Pain, Low Back Pain, Disc Protrusion, Sciatica, Arthritis, Sports Injuries, Post-Surgical conditions, Pelvic issues, Achilles Tendon, Ligament injuries, Stroke recovery, Headaches, Migraines
-
-STATS: 5000+ patients, 5+ years experience, 92% success rate, 5.0 Google Rating
-
-BOOKING: WhatsApp https://wa.me/919712155905 or call +91 97121 55905. Walk-ins welcome.
-
-PRICING: Varies by treatment - call or WhatsApp for current rates.
-
-Be friendly, professional, and concise. For appointments or pricing, always direct to WhatsApp or phone. Respond in the same language the user writes in.`;
+function getBotAnswer(msg) {
+  const lower = msg.toLowerCase();
+  for (const entry of BOT_RESPONSES) {
+    if (entry.keys.some(k => lower.includes(k))) {
+      return entry.answer;
+    }
+  }
+  // fallback
+  return `Thanks for your question! 😊\n\nI'm not sure about that specific query. For the most accurate and personalised answer, please contact Dr. Hiren directly:\n\n📲 **WhatsApp:** https://wa.me/919712155905\n📞 **Call:** +91 97121 55905\n\nWe're happy to help during clinic hours:\nMon–Fri: 9 AM–1 PM & 4–7:30 PM\nSat–Sun: 9 AM–1:30 PM & 4–7:30 PM`;
+}
 
 let chatOpen = false;
-let chatHistory = [];
 
 function toggleChat() {
   chatOpen = !chatOpen;
@@ -3889,35 +3927,18 @@ function sendQuick(text) {
   sendChat();
 }
 
-async function sendChat() {
+function sendChat() {
   const input = document.getElementById('chatInput');
   const msg = input.value.trim();
   if (!msg) return;
   input.value = '';
   appendMsg(msg, 'user');
-  chatHistory.push({ role: 'user', content: msg });
   const typing = appendTyping();
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 400,
-        system: SPINE_KNOWLEDGE,
-        messages: chatHistory
-      })
-    });
-    const data = await res.json();
-    const reply = data.content?.[0]?.text || "Sorry, I couldn't process that. Please WhatsApp us at +91 97121 55905.";
+  setTimeout(() => {
     typing.remove();
+    const reply = getBotAnswer(msg);
     appendMsg(reply, 'bot');
-    chatHistory.push({ role: 'assistant', content: reply });
-    if (chatHistory.length > 20) chatHistory = chatHistory.slice(-20);
-  } catch(e) {
-    typing.remove();
-    appendMsg("Connection issue. Please WhatsApp us at +91 97121 55905 or call for instant help!", 'bot');
-  }
+  }, 600 + Math.random() * 400);
 }
 
 function appendMsg(text, type) {
