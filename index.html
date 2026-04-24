@@ -9,21 +9,21 @@
 <style>
 /* ===== ROOT VARIABLES ===== */
 :root {
-  --navy: #5B2D8E;
-  --blue: #5B2D8E;
-  --sky: #7B4BB8;
-  --green: #7B4BB8;
-  --mint: #9B6FD4;
-  --light-green: #EDE0F8;
-  --light: #F3EBFD;
-  --white: #FDFAFF;
-  --gray: #F7F2FD;
-  --mint-bg: #F3EBFD;
-  --text: #1e1228;
-  --muted: #6b5580;
-  --gold: #9B6FD4;
-  --shadow: 0 4px 24px rgba(91,45,142,0.08);
-  --shadow-lg: 0 20px 60px rgba(91,45,142,0.12);
+  --navy: #0E7FAB;
+  --blue: #0E7FAB;
+  --sky: #1ABC9C;
+  --green: #1ABC9C;
+  --mint: #17a589;
+  --light-green: #e8f8f5;
+  --light: #e8f8f5;
+  --white: #FAFFFE;
+  --gray: #f0faf8;
+  --mint-bg: #e8f8f5;
+  --text: #0d2b2b;
+  --muted: #4a7a72;
+  --gold: #17a589;
+  --shadow: 0 4px 24px rgba(26,188,156,0.08);
+  --shadow-lg: 0 20px 60px rgba(26,188,156,0.12);
 }
 
 /* ===== RESET ===== */
@@ -45,8 +45,8 @@ ul { list-style:none; }
 /* ===== TYPOGRAPHY ===== */
 .section-pill {
   display:inline-flex; align-items:center;
-  background:rgba(91,45,142,.08); color:var(--green);
-  border:1px solid rgba(91,45,142,.2); border-radius:50px;
+  background:rgba(26,188,156,.08); color:var(--green);
+  border:1px solid rgba(26,188,156,.2); border-radius:50px;
   padding:6px 18px; font-size:0.8rem; font-weight:600;
   letter-spacing:0.5px; margin-bottom:1rem;
 }
@@ -66,7 +66,7 @@ ul { list-style:none; }
   font-weight:600; font-size:0.95rem; text-decoration:none;
   transition:all .3s; border:none; cursor:pointer; font-family:'DM Sans',sans-serif;
 }
-.btn-primary:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 12px 30px rgba(91,45,142,.35); }
+.btn-primary:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 12px 30px rgba(26,188,156,.35); }
 .btn-ghost {
   display:inline-flex; align-items:center; gap:8px;
   background:transparent; color:white;
@@ -139,8 +139,8 @@ ul { list-style:none; }
 .dropdown-menu {
   position:absolute; top:calc(100% + 8px); left:0;
   background:white; border-radius:16px;
-  box-shadow:0 20px 50px rgba(91,45,142,.15);
-  border:1px solid rgba(91,45,142,.06);
+  box-shadow:0 20px 50px rgba(26,188,156,.15);
+  border:1px solid rgba(26,188,156,.06);
   min-width:260px; padding:8px;
   opacity:0; visibility:hidden; transform:translateY(-8px);
   transition:all .25s; z-index:100;
@@ -181,16 +181,16 @@ ul { list-style:none; }
 /* ===== HERO ===== */
 .hero-section {
   min-height:100vh; display:flex; align-items:center;
-  background:linear-gradient(135deg,#2E0F5A 0%,#5B2D8E 50%,#7B4BB8 100%);
+  background:linear-gradient(135deg,#0a3d55 0%,#0E7FAB 50%,#1ABC9C 100%);
   position:relative; overflow:hidden; padding-top:90px;
 }
 .hero-bg-orb {
   position:absolute; border-radius:50%;
   animation:orbFloat 8s ease-in-out infinite;
 }
-.orb1 { width:600px; height:600px; right:-200px; top:50%; transform:translateY(-50%); background:radial-gradient(circle,rgba(91,45,142,.12),transparent 70%); }
-.orb2 { width:400px; height:400px; left:-100px; bottom:-100px; background:radial-gradient(circle,rgba(91,45,142,.08),transparent 70%); animation-delay:3s; }
-.orb3 { width:250px; height:250px; left:30%; top:10%; background:radial-gradient(circle,rgba(91,45,142,.06),transparent 70%); animation-delay:5s; }
+.orb1 { width:600px; height:600px; right:-200px; top:50%; transform:translateY(-50%); background:radial-gradient(circle,rgba(26,188,156,.18),transparent 70%); }
+.orb2 { width:400px; height:400px; left:-100px; bottom:-100px; background:radial-gradient(circle,rgba(26,188,156,.08),transparent 70%); animation-delay:3s; }
+.orb3 { width:250px; height:250px; left:30%; top:10%; background:radial-gradient(circle,rgba(26,188,156,.06),transparent 70%); animation-delay:5s; }
 @keyframes orbFloat { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-20px) scale(1.05)} }
 .hero-content {
   max-width:1200px; margin:0 auto; padding:80px 5%;
@@ -199,13 +199,13 @@ ul { list-style:none; }
 }
 .hero-badge {
   display:inline-flex; align-items:center; gap:8px;
-  background:rgba(91,45,142,.15); color:var(--sky);
-  border:1px solid rgba(91,45,142,.25); border-radius:50px;
+  background:rgba(26,188,156,.15); color:var(--sky);
+  border:1px solid rgba(26,188,156,.25); border-radius:50px;
   padding:7px 18px; font-size:0.8rem; font-weight:600;
   letter-spacing:0.5px; margin-bottom:1.5rem;
   animation:badgePulse 3s ease-in-out infinite;
 }
-@keyframes badgePulse { 0%,100%{box-shadow:0 0 0 0 rgba(91,45,142,.2)} 50%{box-shadow:0 0 0 8px rgba(91,45,142,0)} }
+@keyframes badgePulse { 0%,100%{box-shadow:0 0 0 0 rgba(26,188,156,.2)} 50%{box-shadow:0 0 0 8px rgba(26,188,156,0)} }
 .hero-title {
   font-family:'Playfair Display',serif;
   font-size:clamp(2.4rem,4.5vw,3.8rem); color:white;
@@ -229,7 +229,7 @@ ul { list-style:none; }
 .hc-head { font-family:'Playfair Display',serif; font-size:1.2rem; color:white; font-weight:600; margin-bottom:1.2rem; }
 .hc-items { display:flex; flex-direction:column; gap:10px; margin-bottom:1.5rem; }
 .hc-item { display:flex; align-items:center; gap:10px; color:rgba(255,255,255,.82); font-size:0.92rem; padding:10px 14px; background:rgba(255,255,255,.05); border-radius:10px; transition:background .2s; }
-.hc-item:hover { background:rgba(91,45,142,.15); }
+.hc-item:hover { background:rgba(26,188,156,.15); }
 .hci-dot { width:8px; height:8px; background:var(--sky); border-radius:50%; flex-shrink:0; }
 .hc-btn { display:block; text-align:center; background:var(--green); color:white; padding:12px; border-radius:12px; font-weight:600; font-size:0.9rem; text-decoration:none; transition:background .2s; }
 .hc-btn:hover { background:var(--mint); }
@@ -254,7 +254,7 @@ ul { list-style:none; }
 @keyframes scrollAnim { 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(12px)} }
 
 /* ===== TRUST BAR ===== */
-.trust-bar {
+.trust-bar { /* teal themed */
   background:var(--navy); color:rgba(255,255,255,.8);
   padding:18px 5%; display:flex; align-items:center; justify-content:center;
   gap:2.5rem; flex-wrap:wrap;
@@ -274,7 +274,7 @@ ul { list-style:none; }
   align-items:center; justify-content:center;
   border-radius:20px; overflow:hidden;
 }
-.ph1 { background:linear-gradient(135deg,#F3EBFD,#EDE0F8); }
+.ph1 { background:linear-gradient(135deg,#e8f8f5,#e8f8f5); }
 .ph2 { background:linear-gradient(135deg,#e8f5e9,#c8e6c9); }
 .ph-emoji { font-size:3.5rem; margin-bottom:0.8rem; }
 .ph-label { font-weight:600; color:var(--navy); font-size:0.95rem; }
@@ -283,7 +283,7 @@ ul { list-style:none; }
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
   background:var(--navy); color:white; border-radius:16px;
   padding:18px 20px; text-align:center; z-index:10;
-  box-shadow:0 10px 30px rgba(91,45,142,.3);
+  box-shadow:0 10px 30px rgba(26,188,156,.3);
   animation:cardFloat 5s ease-in-out infinite;
 }
 .qsf-n { font-size:1.8rem; font-weight:800; color:var(--sky); font-family:'Playfair Display',serif; }
@@ -304,7 +304,7 @@ ul { list-style:none; }
 .mva-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:3rem; }
 .mva-card {
   background:white; border-radius:20px; padding:32px 28px;
-  box-shadow:var(--shadow); border:1px solid rgba(91,45,142,.05);
+  box-shadow:var(--shadow); border:1px solid rgba(26,188,156,.05);
   transition:transform .3s, box-shadow .3s;
 }
 .mva-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
@@ -343,7 +343,7 @@ ul { list-style:none; }
 .sh-card:nth-child(3) { grid-area:c3; min-height:460px; }
 .sh-card:nth-child(4) { grid-area:c4; }
 .sh-card:nth-child(5) { grid-area:c5; }
-.sh-card:hover { transform:translateY(-4px); box-shadow:0 24px 60px rgba(91,45,142,.2); }
+.sh-card:hover { transform:translateY(-4px); box-shadow:0 24px 60px rgba(26,188,156,.2); }
 .shc-bg-img {
   position:absolute; inset:0;
   background-image:var(--bg-url);
@@ -380,9 +380,9 @@ ul { list-style:none; }
   width:90px; height:90px; border-radius:50%; margin:0 auto 1.2rem;
   display:flex; align-items:center; justify-content:center;
   font-size:2rem; position:relative; overflow:hidden;
-  box-shadow:0 8px 24px rgba(91,45,142,.12);
+  box-shadow:0 8px 24px rgba(26,188,156,.12);
 }
-.ps-c1 { background:linear-gradient(135deg,#F3EBFD,#EDE0F8); }
+.ps-c1 { background:linear-gradient(135deg,#e8f8f5,#e8f8f5); }
 .ps-c2 { background:linear-gradient(135deg,#e8f5e9,#a5d6a7); }
 .ps-c3 { background:linear-gradient(135deg,#fff3e0,#ffcc80); }
 .ps-c4 { background:linear-gradient(135deg,#fce4ec,#f48fb1); }
@@ -398,7 +398,7 @@ ul { list-style:none; }
 .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:3rem; }
 .testi-card {
   background:white; border-radius:20px; padding:28px;
-  box-shadow:var(--shadow); border:1px solid rgba(91,45,142,.05);
+  box-shadow:var(--shadow); border:1px solid rgba(26,188,156,.05);
   transition:transform .3s, box-shadow .3s;
 }
 .testi-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
@@ -412,12 +412,12 @@ ul { list-style:none; }
 
 /* ===== FINAL CTA ===== */
 .final-cta {
-  background:linear-gradient(135deg,#5B2D8E,var(--navy) 50%,#7B4BB8);
+  background:linear-gradient(135deg,#0E7FAB,var(--navy) 50%,#1ABC9C);
   padding:100px 5%; text-align:center; position:relative; overflow:hidden;
 }
 .fca-orb { position:absolute; border-radius:50%; }
-.fca-orb1 { width:500px; height:500px; background:radial-gradient(circle,rgba(91,45,142,.1),transparent 70%); right:-100px; top:-100px; }
-.fca-orb2 { width:300px; height:300px; background:radial-gradient(circle,rgba(91,45,142,.15),transparent 70%); left:-50px; bottom:-50px; }
+.fca-orb1 { width:500px; height:500px; background:radial-gradient(circle,rgba(26,188,156,.1),transparent 70%); right:-100px; top:-100px; }
+.fca-orb2 { width:300px; height:300px; background:radial-gradient(circle,rgba(26,188,156,.15),transparent 70%); left:-50px; bottom:-50px; }
 
 /* ===== COMPASSIONATE SECTION ===== */
 .compassionate-section { padding:100px 5%; background:white; }
@@ -434,7 +434,7 @@ ul { list-style:none; }
 .comp-img-badge {
   position:absolute; bottom:-20px; right:-20px;
   background:var(--navy); border-radius:16px; padding:20px 24px;
-  text-align:center; box-shadow:0 10px 30px rgba(91,45,142,.25);
+  text-align:center; box-shadow:0 10px 30px rgba(26,188,156,.25);
   animation:cardFloat 5s ease-in-out infinite;
 }
 .cib-num { font-size:2rem; font-weight:800; color:var(--sky); font-family:'Playfair Display',serif; }
@@ -456,7 +456,7 @@ ul { list-style:none; }
 .shs-badge {
   position:absolute; bottom:-20px; left:-20px;
   background:var(--green); border-radius:16px; padding:18px 22px;
-  text-align:center; box-shadow:0 10px 30px rgba(91,45,142,.3);
+  text-align:center; box-shadow:0 10px 30px rgba(26,188,156,.3);
   animation:cardFloat 5s ease-in-out infinite;
 }
 .sb-num { font-size:1.8rem; font-weight:800; color:white; font-family:'Playfair Display',serif; }
@@ -469,7 +469,7 @@ ul { list-style:none; }
 .benefits-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:3rem; }
 .benefit-card {
   background:white; border-radius:20px; padding:32px 28px;
-  box-shadow:var(--shadow); border:1px solid rgba(91,45,142,.05);
+  box-shadow:var(--shadow); border:1px solid rgba(26,188,156,.05);
   transition:transform .3s;
 }
 .benefit-card:hover { transform:translateY(-4px); }
@@ -501,7 +501,7 @@ ul { list-style:none; }
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus,
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-  border-color:var(--green); box-shadow:0 0 0 3px rgba(91,45,142,.1); background:white;
+  border-color:var(--green); box-shadow:0 0 0 3px rgba(26,188,156,.1); background:white;
 }
 .form-group textarea { resize:vertical; min-height:100px; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
@@ -511,7 +511,7 @@ ul { list-style:none; }
   cursor:pointer; margin-top:0.5rem; transition:all .3s;
   font-family:'DM Sans',sans-serif;
 }
-.booking-submit-btn:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 10px 30px rgba(91,45,142,.3); }
+.booking-submit-btn:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 10px 30px rgba(26,188,156,.3); }
 
 /* ===== CONTACT ===== */
 .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:50px; align-items:start; }
@@ -575,14 +575,14 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 }
 .call-float {
   bottom: 100px; right: 28px;
-  background: #7B4BB8;
-  box-shadow: 0 6px 24px rgba(91,45,142,.45);
+  background: #1ABC9C;
+  box-shadow: 0 6px 24px rgba(26,188,156,.45);
   animation: fabFloat 3s ease-in-out infinite 0.5s;
 }
 .chat-float {
   bottom: 28px; right: 96px;
   background: var(--navy);
-  box-shadow: 0 6px 24px rgba(91,45,142,.45);
+  box-shadow: 0 6px 24px rgba(26,188,156,.45);
   animation: fabFloat 3s ease-in-out infinite 1s;
 }
 
@@ -606,8 +606,8 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   border-radius: 50%; pointer-events: none;
 }
 .wa-pulse   { background: rgba(37,211,102,.3);  animation: fabPulse 2s infinite; }
-.call-pulse { background: rgba(91,45,142,.3);   animation: fabPulse 2s infinite 0.5s; }
-.chat-pulse { background: rgba(91,45,142,.25);  animation: fabPulse 2s infinite 1s; }
+.call-pulse { background: rgba(26,188,156,.3);   animation: fabPulse 2s infinite 0.5s; }
+.chat-pulse { background: rgba(26,188,156,.25);  animation: fabPulse 2s infinite 1s; }
 @keyframes fabPulse {
   0%,100% { transform: scale(1);   opacity: 1; }
   50%     { transform: scale(1.6); opacity: 0; }
@@ -618,7 +618,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .chat-float-badge {
   position: absolute; top: -6px; right: -6px;
   width: 18px; height: 18px;
-  background: #9B6FD4; border-radius: 50%;
+  background: #17a589; border-radius: 50%;
   font-size: 0.65rem; font-weight: 700; color: white;
   display: flex; align-items: center; justify-content: center;
   animation: badgePulse 2.5s ease-in-out infinite;
@@ -652,7 +652,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   position:fixed; bottom:100px; right:28px; z-index:1000;
   width:360px; height:520px;
   background:white; border-radius:20px;
-  box-shadow:0 20px 60px rgba(91,45,142,.22);
+  box-shadow:0 20px 60px rgba(26,188,156,.22);
   display:flex; flex-direction:column;
   overflow:hidden;
   transform:scale(0.85) translateY(20px);
@@ -665,7 +665,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   opacity:1; pointer-events:all;
 }
 .chatbot-header {
-  background:linear-gradient(135deg,var(--navy),#7B4BB8);
+  background:linear-gradient(135deg,var(--navy),#1ABC9C);
   padding:16px 20px; display:flex; align-items:center; gap:12px;
   flex-shrink:0;
 }
@@ -700,7 +700,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .chat-msg.bot {
   background:white; color:var(--text);
   border-bottom-left-radius:4px;
-  box-shadow:0 2px 8px rgba(91,45,142,.08);
+  box-shadow:0 2px 8px rgba(26,188,156,.08);
   align-self:flex-start;
 }
 .chat-msg.user {
@@ -713,7 +713,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   display:flex; align-items:center; gap:4px;
   background:white; padding:10px 14px; border-radius:14px;
   border-bottom-left-radius:4px;
-  box-shadow:0 2px 8px rgba(91,45,142,.08);
+  box-shadow:0 2px 8px rgba(26,188,156,.08);
   align-self:flex-start; width:fit-content;
 }
 .chat-typing span {
@@ -870,7 +870,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   .benefits-grid { grid-template-columns:1fr; }
   .booking-wrap, .contact-grid { grid-template-columns:1fr; }
   .footer-inner { grid-template-columns:1fr; }
-  .trust-bar { gap:1rem; justify-content:flex-start; }
+  .trust-bar { /* teal themed */ gap:1rem; justify-content:flex-start; }
   .mva-cta-banner { flex-direction:column; text-align:center; }
   .footer-bottom { flex-direction:column; text-align:center; }
 }
@@ -885,20 +885,20 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   width: 64px; height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(91,45,142,0.25);
-  box-shadow: 0 2px 12px rgba(91,45,142,0.15);
+  border: 2px solid rgba(26,188,156,0.25);
+  box-shadow: 0 2px 12px rgba(26,188,156,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .nav-logo:hover .nav-logo-img {
   transform: rotate(10deg) scale(1.08);
-  box-shadow: 0 6px 24px rgba(91,45,142,0.35);
+  box-shadow: 0 6px 24px rgba(26,188,156,0.35);
 }
 .footer-logo-img {
   width: 64px; height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(91,45,142,0.3);
-  box-shadow: 0 4px 20px rgba(91,45,142,0.2);
+  border: 2px solid rgba(26,188,156,0.3);
+  box-shadow: 0 4px 20px rgba(26,188,156,0.2);
   transition: transform 0.4s ease;
 }
 .footer-logo-img:hover { transform: rotate(-8deg) scale(1.05); }
@@ -915,11 +915,11 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 @keyframes pulse-ring  { 0%{transform:scale(1);opacity:.8} 100%{transform:scale(2.2);opacity:0} }
 @keyframes spin-slow   { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
 @keyframes heartbeat   { 0%,100%{transform:scale(1)} 14%{transform:scale(1.08)} 28%{transform:scale(1)} 42%{transform:scale(1.05)} }
-@keyframes borderPulse { 0%,100%{border-color:rgba(91,45,142,0.3)} 50%{border-color:rgba(91,45,142,0.8)} }
+@keyframes borderPulse { 0%,100%{border-color:rgba(26,188,156,0.3)} 50%{border-color:rgba(26,188,156,0.8)} }
 @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
 @keyframes bounceIn    { 0%{transform:scale(0.3);opacity:0} 50%{transform:scale(1.05)} 70%{transform:scale(0.95)} 100%{transform:scale(1);opacity:1} }
 @keyframes slideInFromBottom { from{transform:translateY(60px);opacity:0} to{transform:translateY(0);opacity:1} }
-@keyframes glowPulse   { 0%,100%{box-shadow:0 0 10px rgba(91,45,142,0.2)} 50%{box-shadow:0 0 30px rgba(91,45,142,0.6),0 0 60px rgba(91,45,142,0.3)} }
+@keyframes glowPulse   { 0%,100%{box-shadow:0 0 10px rgba(26,188,156,0.2)} 50%{box-shadow:0 0 30px rgba(26,188,156,0.6),0 0 60px rgba(26,188,156,0.3)} }
 
 /* ===== ENHANCED NAVBAR ===== */
 #navbar {
@@ -944,13 +944,13 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 
 /* ===== ENHANCED HERO ===== */
 .hero-section {
-  background: linear-gradient(135deg,#2E0F5A 0%,#5B2D8E 30%,#9B6FD4 65%,#7B4BB8 100%) !important;
+  background: linear-gradient(135deg,#0a3d55 0%,#0E7FAB 30%,#17a589 65%,#1ABC9C 100%) !important;
 }
 .hero-section::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(91,45,142,0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 20% 80%, rgba(91,45,142,0.06) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 70% 50%, rgba(26,188,156,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(26,188,156,0.06) 0%, transparent 50%);
   pointer-events: none;
 }
 .hero-badge {
@@ -979,7 +979,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .hero-card:nth-child(3) { animation-delay: 2s; }
 .hero-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 20px 50px rgba(91,45,142,0.25) !important;
+  box-shadow: 0 20px 50px rgba(26,188,156,0.25) !important;
 }
 
 /* ===== ENHANCED BUTTONS ===== */
@@ -996,7 +996,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   opacity: 0; transition: opacity 0.3s ease;
 }
 .btn-primary:hover::before { opacity: 1; }
-.btn-primary:hover { transform: translateY(-3px) !important; box-shadow: 0 15px 40px rgba(91,45,142,0.45) !important; }
+.btn-primary:hover { transform: translateY(-3px) !important; box-shadow: 0 15px 40px rgba(26,188,156,0.45) !important; }
 .btn-book {
   transition: all 0.3s ease !important;
   position: relative; overflow: hidden;
@@ -1017,7 +1017,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 }
 .sh-card:hover {
   transform: translateY(-10px) scale(1.02) !important;
-  box-shadow: 0 30px 70px rgba(91,45,142,0.3) !important;
+  box-shadow: 0 30px 70px rgba(26,188,156,0.3) !important;
 }
 .shc-bg-img { transition: transform 0.7s cubic-bezier(0.4,0,0.2,1) !important; }
 .sh-card:hover .shc-bg-img { transform: scale(1.12) !important; }
@@ -1028,11 +1028,11 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 }
 .testi-card:hover {
   transform: translateY(-8px) !important;
-  box-shadow: 0 25px 60px rgba(91,45,142,0.18) !important;
+  box-shadow: 0 25px 60px rgba(26,188,156,0.18) !important;
 }
 .mva-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 25px 60px rgba(91,45,142,0.2) !important;
+  box-shadow: 0 25px 60px rgba(26,188,156,0.2) !important;
 }
 .benefit-card:hover { transform: translateY(-6px) !important; }
 
@@ -1040,7 +1040,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .qi-photo {
   transition: transform 0.6s cubic-bezier(0.4,0,0.2,1), box-shadow 0.6s ease !important;
 }
-.qi-photo:hover { transform: scale(1.04) rotate(1deg) !important; box-shadow: 0 30px 70px rgba(91,45,142,0.25) !important; }
+.qi-photo:hover { transform: scale(1.04) rotate(1deg) !important; box-shadow: 0 30px 70px rgba(26,188,156,0.25) !important; }
 .qi-photo img { transition: transform 0.6s ease !important; }
 .qi-photo:hover img { transform: scale(1.06) !important; }
 
@@ -1050,9 +1050,9 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   transition: all 0.3s ease;
 }
 .section-pill:hover {
-  background: rgba(91,45,142,0.15) !important;
+  background: rgba(26,188,156,0.15) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(91,45,142,0.2);
+  box-shadow: 0 4px 15px rgba(26,188,156,0.2);
 }
 
 /* ===== STAT CARDS ===== */
@@ -1064,7 +1064,7 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 /* ===== FOOTER ENHANCED ===== */
 footer {
   position: relative;
-  background: linear-gradient(135deg, #2E0F5A 0%, #5B2D8E 50%, #7B4BB8 100%) !important;
+  background: linear-gradient(135deg, #0a4c6a 0%, #0E7FAB 50%, #1ABC9C 100%) !important;
 }
 footer::before {
   content: '';
@@ -1098,13 +1098,13 @@ footer::before {
 
 /* ===== PAGE HEADER ENHANCED ===== */
 .page-header {
-  background: linear-gradient(135deg, #2E0F5A 0%, #7B4BB8 50%, #7B4BB8 100%) !important;
+  background: linear-gradient(135deg, #0a4c6a 0%, #1ABC9C 50%, #1ABC9C 100%) !important;
   position: relative; overflow: hidden;
 }
 .page-header::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(91,45,142,0.12) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 50%, rgba(26,188,156,0.12) 0%, transparent 60%);
 }
 .page-header h1 {
   animation: fadeInUp 0.8s ease both;
@@ -1119,7 +1119,7 @@ footer::before {
 }
 .booking-form input:focus, .booking-form select:focus {
   border-color: var(--blue) !important;
-  box-shadow: 0 0 0 4px rgba(91,45,142,0.15) !important;
+  box-shadow: 0 0 0 4px rgba(26,188,156,0.15) !important;
   transform: translateY(-1px);
 }
 
@@ -1166,7 +1166,7 @@ footer::before {
   position: fixed;
   width: 20px; height: 20px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(91,45,142,0.6), transparent 70%);
+  background: radial-gradient(circle, rgba(26,188,156,0.6), transparent 70%);
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%,-50%);
@@ -1198,7 +1198,7 @@ footer::before {
 }
 .hero-particles span {
   position: absolute; border-radius: 50%;
-  background: rgba(91,45,142,0.35);
+  background: rgba(26,188,156,0.35);
   animation: float var(--dur,6s) ease-in-out infinite;
   animation-delay: var(--delay,0s);
 }
@@ -1228,12 +1228,12 @@ footer::before {
   background: linear-gradient(135deg, var(--blue), var(--sky));
   color: white; border: none; cursor: pointer; z-index: 999;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; box-shadow: 0 4px 20px rgba(91,45,142,0.4);
+  font-size: 1.2rem; box-shadow: 0 4px 20px rgba(26,188,156,0.4);
   opacity: 0; transform: translateY(20px);
   transition: all 0.3s ease;
 }
 .scroll-top.visible { opacity: 1; transform: translateY(0); }
-.scroll-top:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(91,45,142,0.6); }
+.scroll-top:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(26,188,156,0.6); }
 
 /* ===== IMAGE HOVER OVERLAY ===== */
 .sh-card .shc-overlay {
@@ -1242,13 +1242,13 @@ footer::before {
 
 /* ===== ENHANCED FOOTER BOTTOM ===== */
 .footer-bottom {
-  background: linear-gradient(90deg, rgba(91,45,142,0.05), transparent, rgba(91,45,142,0.05));
+  background: linear-gradient(90deg, rgba(26,188,156,0.05), transparent, rgba(26,188,156,0.05));
   border-top: 1px solid rgba(255,255,255,0.06) !important;
 }
 
 /* ===== GLOW ON SECTION PILLS ===== */
 .section-pill {
-  box-shadow: 0 2px 12px rgba(91,45,142,0.12);
+  box-shadow: 0 2px 12px rgba(26,188,156,0.12);
   transition: all 0.3s ease;
 }
 
@@ -1277,7 +1277,7 @@ footer::before {
 }
 .pain-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(10,20,40,0.92) 0%, rgba(91,45,142,0.88) 50%, rgba(30,73,118,0.85) 100%);
+  background: linear-gradient(135deg, rgba(10,20,40,0.92) 0%, rgba(26,188,156,0.88) 50%, rgba(30,73,118,0.85) 100%);
 }
 .pain-inner { position: relative; z-index: 2; }
 .pain-grid {
@@ -1301,19 +1301,19 @@ footer::before {
 .pain-item::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(91,45,142,0.12), rgba(91,45,142,0.08));
+  background: linear-gradient(135deg, rgba(26,188,156,0.12), rgba(26,188,156,0.08));
   opacity: 0; transition: opacity 0.3s ease;
 }
 .pain-item:hover::before { opacity: 1; }
-.pain-item:hover { color: #9B6FD4; transform: translateX(4px); }
+.pain-item:hover { color: #17a589; transform: translateX(4px); }
 .pain-item:nth-child(3n) { border-right: none; }
 .pain-item-wide {
   grid-column: span 1;
 }
 .pain-icon {
   width: 42px; height: 42px;
-  background: rgba(91,45,142,0.15);
-  border: 1px solid rgba(91,45,142,0.25);
+  background: rgba(26,188,156,0.15);
+  border: 1px solid rgba(26,188,156,0.25);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -1321,8 +1321,8 @@ footer::before {
 }
 .pain-icon svg { width: 24px; height: 24px; }
 .pain-item:hover .pain-icon {
-  background: rgba(91,45,142,0.3);
-  border-color: rgba(91,45,142,0.6);
+  background: rgba(26,188,156,0.3);
+  border-color: rgba(26,188,156,0.6);
   transform: scale(1.1) rotate(5deg);
 }
 
@@ -1348,7 +1348,7 @@ footer::before {
   width: 10px; height: 10px; border-radius: 50%;
   background: var(--navy);
   display: inline-block;
-  box-shadow: 0 0 0 4px rgba(91,45,142,0.1);
+  box-shadow: 0 0 0 4px rgba(26,188,156,0.1);
 }
 .tp-steps {
   display: grid;
@@ -1372,12 +1372,12 @@ footer::before {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
-  box-shadow: 0 8px 30px rgba(91,45,142,0.18);
+  box-shadow: 0 8px 30px rgba(26,188,156,0.18);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .tp-step:hover .tp-img-wrap img {
   transform: scale(1.08);
-  box-shadow: 0 16px 50px rgba(91,45,142,0.28);
+  box-shadow: 0 16px 50px rgba(26,188,156,0.28);
 }
 .tp-step-number {
   position: absolute;
@@ -1388,7 +1388,7 @@ footer::before {
   color: white; font-weight: 700; font-size: 0.8rem;
   display: flex; align-items: center; justify-content: center;
   border: 2px solid white;
-  box-shadow: 0 4px 12px rgba(91,45,142,0.4);
+  box-shadow: 0 4px 12px rgba(26,188,156,0.4);
   transition: transform 0.3s ease;
 }
 .tp-step:hover .tp-step-number { transform: scale(1.2) rotate(10deg); }
@@ -1446,8 +1446,8 @@ img { max-width: 100%; height: auto; }
   .nav-inner { gap: 8px; }
   .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0;
     background: white; flex-direction: column; padding: 20px 24px;
-    box-shadow: 0 12px 40px rgba(91,45,142,.14); z-index: 998;
-    border-top: 2px solid rgba(91,45,142,.1); gap: 4px; }
+    box-shadow: 0 12px 40px rgba(26,188,156,.14); z-index: 998;
+    border-top: 2px solid rgba(26,188,156,.1); gap: 4px; }
   .nav-links.open { display: flex !important; }
   .nav-link { padding: 12px 0; border-bottom: 1px solid #f0f4f8; font-size: 1rem; }
   .nav-link:last-child { border-bottom: none; }
@@ -1571,8 +1571,8 @@ img { max-width: 100%; height: auto; }
   background: white;
   border-radius: 20px;
   padding: 28px;
-  box-shadow: 0 4px 24px rgba(91,45,142,.07);
-  border: 1px solid rgba(91,45,142,.06);
+  box-shadow: 0 4px 24px rgba(26,188,156,.07);
+  border: 1px solid rgba(26,188,156,.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex; flex-direction: column; gap: 12px;
   position: relative; overflow: hidden;
@@ -1580,13 +1580,13 @@ img { max-width: 100%; height: auto; }
 .testi-card::before {
   content: 'C';
   position: absolute; top: -10px; right: 20px;
-  font-size: 7rem; color: rgba(91,45,142,.06);
+  font-size: 7rem; color: rgba(26,188,156,.06);
   font-family: Georgia, serif; line-height: 1;
   pointer-events: none;
 }
-.testi-card:hover { transform: translateY(-8px) !important; box-shadow: 0 20px 60px rgba(91,45,142,.14) !important; }
+.testi-card:hover { transform: translateY(-8px) !important; box-shadow: 0 20px 60px rgba(26,188,156,.14) !important; }
 .featured-testi {
-  border: 2px solid rgba(91,45,142,.25) !important;
+  border: 2px solid rgba(26,188,156,.25) !important;
   background: linear-gradient(160deg, #f9fffc, white) !important;
 }
 .featured-testi::after {
@@ -1720,14 +1720,14 @@ img { max-width: 100%; height: auto; }
 /* ===== DR. HIREN PROFILE SECTION ===== */
 .dr-profile-section {
   padding: 100px 5%;
-  background: linear-gradient(160deg, #f8fbff 0%, #F3EBFD 100%);
+  background: linear-gradient(160deg, #f8fbff 0%, #e8f8f5 100%);
   position: relative; overflow: hidden;
 }
 .dr-profile-section::before {
   content: '';
   position: absolute; top: -60px; right: -60px;
   width: 400px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(91,45,142,0.07), transparent 70%);
+  background: radial-gradient(circle, rgba(26,188,156,0.07), transparent 70%);
   pointer-events: none;
 }
 .dr-profile-inner {
@@ -1742,7 +1742,7 @@ img { max-width: 100%; height: auto; }
 .dr-photo-img {
   width: 100%; aspect-ratio: 4/5; object-fit: cover;
   border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(91,45,142,0.18);
+  box-shadow: 0 20px 60px rgba(26,188,156,0.18);
   display: block;
   transition: transform 0.5s ease;
 }
@@ -1752,8 +1752,8 @@ img { max-width: 100%; height: auto; }
   position: absolute; bottom: 24px; left: -20px;
   background: white;
   border-radius: 16px; padding: 14px 20px;
-  box-shadow: 0 8px 30px rgba(91,45,142,0.18);
-  text-align: center; border: 2px solid rgba(91,45,142,0.2);
+  box-shadow: 0 8px 30px rgba(26,188,156,0.18);
+  text-align: center; border: 2px solid rgba(26,188,156,0.2);
   animation: float 4s ease-in-out infinite;
 }
 .dpb-num {
@@ -1769,7 +1769,7 @@ img { max-width: 100%; height: auto; }
   background: linear-gradient(135deg, var(--green), var(--mint));
   color: white; font-size: 0.78rem; font-weight: 700;
   padding: 8px 16px; border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(91,45,142,0.35);
+  box-shadow: 0 4px 16px rgba(26,188,156,0.35);
 }
 
 .dr-subtitle {
@@ -1790,11 +1790,11 @@ img { max-width: 100%; height: auto; }
 .dr-qual-item {
   display: flex; align-items: flex-start; gap: 12px;
   background: white; border-radius: 12px; padding: 12px 16px;
-  border: 1px solid rgba(91,45,142,.07);
-  box-shadow: 0 2px 10px rgba(91,45,142,.05);
+  border: 1px solid rgba(26,188,156,.07);
+  box-shadow: 0 2px 10px rgba(26,188,156,.05);
   transition: all 0.3s ease;
 }
-.dr-qual-item:hover { transform: translateX(6px); border-color: rgba(91,45,142,0.3); box-shadow: 0 4px 20px rgba(91,45,142,.1); }
+.dr-qual-item:hover { transform: translateX(6px); border-color: rgba(26,188,156,0.3); box-shadow: 0 4px 20px rgba(26,188,156,.1); }
 .dqi-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: linear-gradient(135deg, var(--blue), var(--sky));
@@ -1810,12 +1810,12 @@ img { max-width: 100%; height: auto; }
 .dr-stat {
   text-align: center; padding: 16px 20px;
   background: white; border-radius: 14px;
-  border: 1px solid rgba(91,45,142,.08);
-  box-shadow: 0 4px 16px rgba(91,45,142,.07);
+  border: 1px solid rgba(26,188,156,.08);
+  box-shadow: 0 4px 16px rgba(26,188,156,.07);
   flex: 1; min-width: 80px;
   transition: all 0.3s ease;
 }
-.dr-stat:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(91,45,142,.12); }
+.dr-stat:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(26,188,156,.12); }
 .drs-num {
   font-size: 1.5rem; font-weight: 800;
   background: linear-gradient(135deg, var(--blue), var(--sky));
@@ -1876,10 +1876,10 @@ img { max-width: 100%; height: auto; }
 
 .hero-slide-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(91,45,142,0.08);
+  background: rgba(26,188,156,0.08);
   color: var(--green); font-size: 0.82rem; font-weight: 700;
   padding: 8px 18px; border-radius: 40px;
-  border: 1px solid rgba(91,45,142,0.2);
+  border: 1px solid rgba(26,188,156,0.2);
   margin-bottom: 1.4rem;
   transition: all 0.4s ease;
   letter-spacing: .3px;
@@ -1895,13 +1895,13 @@ img { max-width: 100%; height: auto; }
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .hero-accent {
-  background: linear-gradient(135deg, #7B4BB8, #9B6FD4);
+  background: linear-gradient(135deg, #1ABC9C, #17a589);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 /* override old gradient-text on hero */
 .hero-title .gradient-text {
-  background: linear-gradient(135deg, #7B4BB8, #9B6FD4) !important;
+  background: linear-gradient(135deg, #1ABC9C, #17a589) !important;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
@@ -1917,22 +1917,22 @@ img { max-width: 100%; height: auto; }
 .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .hero-btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  background: linear-gradient(135deg, #7B4BB8, #7B4BB8);
+  background: linear-gradient(135deg, #1ABC9C, #1ABC9C);
   color: white; font-weight: 700; font-size: 0.95rem;
   padding: 14px 28px; border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(91,45,142,0.4);
+  box-shadow: 0 8px 24px rgba(26,188,156,0.4);
   transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
 }
-.hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(91,45,142,0.4); }
+.hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(26,188,156,0.4); }
 .hero-btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
   background: white; color: #0d1b2a; font-weight: 700; font-size: 0.95rem;
   padding: 13px 26px; border-radius: 50px;
-  border: 2px solid rgba(91,45,142,0.3); text-decoration: none;
+  border: 2px solid rgba(26,188,156,0.3); text-decoration: none;
   transition: all 0.3s ease;
 }
-.hero-btn-ghost:hover { border-color: #7B4BB8; color: #7B4BB8; transform: translateY(-3px); }
+.hero-btn-ghost:hover { border-color: #1ABC9C; color: #1ABC9C; transform: translateY(-3px); }
 
 /* Stats */
 .hero-stats { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
@@ -1949,7 +1949,7 @@ img { max-width: 100%; height: auto; }
   transition: all 0.3s ease;
   border: none; padding: 0;
 }
-.hero-dot.active { width: 24px; border-radius: 4px; background: #7B4BB8; }
+.hero-dot.active { width: 24px; border-radius: 4px; background: #1ABC9C; }
 
 /* ── RIGHT COLUMN – oval image carousel ── */
 .hero-right {
@@ -1962,7 +1962,7 @@ img { max-width: 100%; height: auto; }
 .hero-oval-pill {
   position: absolute;
   width: 440px; height: 580px;
-  background: linear-gradient(160deg, #F3EBFD, #EDE0F8);
+  background: linear-gradient(160deg, #e8f8f5, #e8f8f5);
   border-radius: 200px;
   top: 50%; left: 50%; transform: translate(-46%, -50%);
   z-index: 0;
@@ -1973,7 +1973,7 @@ img { max-width: 100%; height: auto; }
   width: 400px; height: 540px;
   border-radius: 180px;
   overflow: visible;
-  box-shadow: 0 30px 80px rgba(91,45,142,0.4), 0 8px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 30px 80px rgba(26,188,156,0.4), 0 8px 24px rgba(0,0,0,0.1);
   z-index: 1;
   flex-shrink: 0;
 }
@@ -2008,7 +2008,7 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   transition: all 0.25s ease;
 }
-.hero-arrow:hover { background: #7B4BB8; color: white; transform: translateY(-50%) scale(1.1); }
+.hero-arrow:hover { background: #0E7FAB; color: white; transform: translateY(-50%) scale(1.1); }
 .hero-arrow-prev { left: -18px; }
 .hero-arrow-next { right: -18px; }
 
@@ -2024,14 +2024,14 @@ img { max-width: 100%; height: auto; }
 }
 .oval-badge-top {
   top: 20px; left: 50%; transform: translateX(-50%);
-  background: linear-gradient(135deg,#7B4BB8,#9B6FD4);
+  background: linear-gradient(135deg,#0E7FAB,#1ABC9C);
   color: white;
   animation: float 3.5s ease-in-out infinite;
   z-index: 5;
 }
 .oval-badge-bot {
   bottom: 20px; left: 50%; transform: translateX(-50%);
-  border: 2px solid #7B4BB8; color: #7B4BB8;
+  border: 2px solid #0E7FAB; color: #0E7FAB;
   animation: float 3.5s ease-in-out infinite 1s;
   z-index: 5;
 }
@@ -2123,6 +2123,7 @@ img { max-width: 100%; height: auto; }
       <li><a href="#" onclick="showPage('contact');return false;" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-actions">
+      <a href="https://www.instagram.com/the_spinecenter/?g=5" target="_blank" class="nav-link" style="padding:8px 10px;font-size:1.1rem;" title="Instagram">📸</a>
       <a href="#" onclick="showPage('booking');return false;" class="btn-book">📅 Book Now</a>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -2175,15 +2176,15 @@ img { max-width: 100%; height: auto; }
           <!-- slides -->
           <div class="hero-slides" id="heroSlides">
             <div class="hero-slide active">
-              <img src="images/cert_uk.png" alt="International Certification UK" style="object-position:top">
+              <img src="images/dr_hiren_new.png" alt="Dr. Hiren Dacha - The Spine Centre" style="object-position:top">
               <div class="hero-slide-tag">International Certified — UK 🇬🇧</div>
             </div>
             <div class="hero-slide">
-              <img src="images/cert_switzerland.png" alt="FNT Switzerland Certification" style="object-position:top">
+              <img src="images/alignment.png" alt="Spine Alignment Treatment" style="object-position:top">
               <div class="hero-slide-tag">FNT Certified — Switzerland 🇨🇭</div>
             </div>
             <div class="hero-slide">
-              <img src="images/cert_dna_usa.png" alt="DNA USA Certification" style="object-position:top">
+              <img src="images/osteopathy.png" alt="Osteopathy Treatment" style="object-position:top">
               <div class="hero-slide-tag">DNA Certified — USA 🇺🇸</div>
             </div>
             <div class="hero-slide">
@@ -2227,10 +2228,10 @@ img { max-width: 100%; height: auto; }
     <div class="quality-inner max-wrap">
       <div class="quality-images" data-aos="fade-right">
         <div class="qi-photo qi-photo1">
-          <img src="images/cert_uk.png" alt="International Training UK" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;">
+          <img src="images/physio1.png" alt="Physiotherapy Treatment" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;">
         </div>
         <div class="qi-photo qi-photo2">
-          <img src="images/patient_intl.png" alt="Patient Care" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;">
+          <img src="images/manual_therapy.png" alt="Manual Therapy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;">
         </div>
         <!-- <div class="qi-stat-float">
           <div class="qsf-n">92%</div>
@@ -2271,17 +2272,17 @@ img { max-width: 100%; height: auto; }
       <h2 class="section-title text-center">We're a <span class="color-green">Recognized</span> &amp; Trusted Leader in<br>Restoring Strength and Confidence</h2>
       <div class="mva-cards" data-aos="fade-up">
         <div class="mva-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L17 10L24 11L19 16L20.5 23L14 20L7.5 23L9 16L4 11L11 10L14 4Z" stroke="#7B4BB8" stroke-width="1.5" fill="none"/></svg></div>
+          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L17 10L24 11L19 16L20.5 23L14 20L7.5 23L9 16L4 11L11 10L14 4Z" stroke="#1ABC9C" stroke-width="1.5" fill="none"/></svg></div>
           <h3>Our Mission</h3>
           <p>To deliver evidence-based, personalized care in physiotherapy and chiropractic that empowers individuals and families to live healthier, more fulfilling lives. Whether it's relieving chronic pain, improving spinal alignment — we're committed to your unique journey.</p>
         </div>
         <div class="mva-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#7B4BB8" stroke-width="1.5"/><circle cx="14" cy="14" r="4" fill="#7B4BB8" opacity=".3"/><path d="M14 4V8M14 20V24M4 14H8M20 14H24" stroke="#7B4BB8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1ABC9C" stroke-width="1.5"/><circle cx="14" cy="14" r="4" fill="#1ABC9C" opacity=".3"/><path d="M14 4V8M14 20V24M4 14H8M20 14H24" stroke="#1ABC9C" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Our Vision</h3>
           <p>To be Gandhinagar's most trusted centre for spine health and sports rehabilitation — where cutting-edge international techniques meet genuine, patient-centred compassionate care.</p>
         </div>
         <div class="mva-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22L14 6L22 22" stroke="#7B4BB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 17H19" stroke="#7B4BB8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22L14 6L22 22" stroke="#1ABC9C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 17H19" stroke="#1ABC9C" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Our Approach</h3>
           <p>We focus on root-cause solutions across all our services. From hands-on physiotherapy to precise chiropractic adjustments — our care is deeply personalized, research-driven, and results-focused. Every treatment is designed for long-term progress, not quick fixes.</p>
         </div>
@@ -2408,40 +2409,40 @@ img { max-width: 100%; height: auto; }
       <div class="tp-steps">
         <div class="tp-step" data-aos="fade-up" data-aos-delay="0">
           <div class="tp-img-wrap">
-            <img src="images/cert_uk.png" alt="International Training" style="object-position:top">
+            <img src="images/physio2.png" alt="Expert Therapist" style="object-position:top">
             <div class="tp-step-number">1</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#7B4BB8" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#7B4BB8" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#1ABC9C" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#1ABC9C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>Get Paired With A Therapist</h4>
           <p>We carefully match you with a certified physiotherapist based on your condition, goals, and preferences.</p>
         </div>
         <div class="tp-step" data-aos="fade-up" data-aos-delay="150">
           <div class="tp-img-wrap">
-            <img src="images/cert_switzerland.png" alt="Certified Technique" style="object-position:top">
+            <img src="images/dry_needling.png" alt="Advanced Techniques" style="object-position:top">
             <div class="tp-step-number">2</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 18 40 10 Q60 2 80 10" stroke="#7B4BB8" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#7B4BB8" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 18 40 10 Q60 2 80 10" stroke="#1ABC9C" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#1ABC9C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>Choose Your Preferred Way To Receive Care</h4>
           <p>Whether in-clinic or at home, we offer flexible treatment delivery that fits your schedule and comfort.</p>
         </div>
         <div class="tp-step" data-aos="fade-up" data-aos-delay="300">
           <div class="tp-img-wrap">
-            <img src="images/cert_dna_usa.png" alt="DNA USA Certified" style="object-position:top">
+            <img src="images/rehabilitation.png" alt="Rehabilitation" style="object-position:top">
             <div class="tp-step-number">3</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#7B4BB8" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#7B4BB8" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#1ABC9C" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#1ABC9C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>We Help You Get Better, Faster!</h4>
           <p>Our evidence-based methods and personalised plans ensure measurable results in the shortest time possible.</p>
         </div>
         <div class="tp-step tp-step-last" data-aos="fade-up" data-aos-delay="450">
           <div class="tp-img-wrap">
-            <img src="images/dr_clinic.png" alt="Dr. Hiren at Clinic" style="object-position:top">
+            <img src="images/dr_hiren_new.png" alt="Dr. Hiren Dacha" style="object-position:top">
             <div class="tp-step-number">4</div>
           </div>
           <h4>What Physiotherapy Can Help With</h4>
@@ -2452,6 +2453,72 @@ img { max-width: 100%; height: auto; }
   </section>
 
 
+  <!-- ===== PAIN CONDITIONS PHOTO CARDS ===== -->
+  <section style="padding:90px 5%;background:#f0faf8;">
+    <div class="max-wrap">
+      <div class="text-center" style="margin-bottom:3rem">
+        <div class="section-pill">Conditions We Treat</div>
+        <h2 class="section-title">Common <span class="color-green">Pain</span> <span class="color-navy">Conditions</span></h2>
+        <p class="section-sub text-center" style="margin:0 auto 0.5rem">From neck pain to sports injuries — we treat them all with expert care.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="pain-photo-grid">
+        <div class="pain-photo-card" onclick="showPage('physio')" style="position:relative;border-radius:20px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 8px 30px rgba(26,188,156,0.15);">
+          <img src="images/pain_neck.png" alt="Neck Pain" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(14,127,171,0.88) 0%,rgba(14,127,171,0.1) 60%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;color:white;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:0.5px;">NECK PAIN</div>
+            <div style="font-size:0.8rem;opacity:0.85;margin-top:4px;">Expert cervical care →</div>
+          </div>
+        </div>
+        <div class="pain-photo-card" onclick="showPage('physio')" style="position:relative;border-radius:20px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 8px 30px rgba(26,188,156,0.15);">
+          <img src="images/pain_back.png" alt="Back Pain" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,188,156,0.88) 0%,rgba(26,188,156,0.1) 60%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;color:white;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:0.5px;">BACK PAIN</div>
+            <div style="font-size:0.8rem;opacity:0.85;margin-top:4px;">Spine specialists →</div>
+          </div>
+        </div>
+        <div class="pain-photo-card" onclick="showPage('physio')" style="position:relative;border-radius:20px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 8px 30px rgba(26,188,156,0.15);">
+          <img src="images/pain_headache.png" alt="Headache" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(14,127,171,0.88) 0%,rgba(14,127,171,0.1) 60%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;color:white;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:0.5px;">HEADACHE</div>
+            <div style="font-size:0.8rem;opacity:0.85;margin-top:4px;">Craniosacral therapy →</div>
+          </div>
+        </div>
+        <div class="pain-photo-card" onclick="showPage('physio')" style="position:relative;border-radius:20px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 8px 30px rgba(26,188,156,0.15);">
+          <img src="images/pain_injury.png" alt="Sports Injury" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,188,156,0.88) 0%,rgba(26,188,156,0.1) 60%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;color:white;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:0.5px;">INJURY</div>
+            <div style="font-size:0.8rem;opacity:0.85;margin-top:4px;">Sports rehabilitation →</div>
+          </div>
+        </div>
+        <div class="pain-photo-card" onclick="showPage('physio')" style="position:relative;border-radius:20px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 8px 30px rgba(26,188,156,0.15);">
+          <img src="images/pain_posture.png" alt="Bad Posture" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(14,127,171,0.88) 0%,rgba(14,127,171,0.1) 60%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;color:white;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:0.5px;">BAD POSTURE</div>
+            <div style="font-size:0.8rem;opacity:0.85;margin-top:4px;">Posture correction →</div>
+          </div>
+        </div>
+        <div class="pain-photo-card" onclick="showPage('physio')" style="position:relative;border-radius:20px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 8px 30px rgba(26,188,156,0.15);">
+          <img src="images/physio1.png" alt="General Pain" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,188,156,0.88) 0%,rgba(26,188,156,0.1) 60%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;color:white;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:0.5px;">JOINT PAIN</div>
+            <div style="font-size:0.8rem;opacity:0.85;margin-top:4px;">Holistic physiotherapy →</div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .pain-photo-card:hover img { transform: scale(1.06); }
+        @media(max-width:768px) { .pain-photo-grid { grid-template-columns: 1fr 1fr !important; } }
+        @media(max-width:480px) { .pain-photo-grid { grid-template-columns: 1fr !important; } }
+      </style>
+    </div>
+  </section>
+
   <!-- ===== WHERE DO YOU NEED ATTENTION ===== -->
   <section class="pain-section">
     <div class="pain-bg-img"></div>
@@ -2459,7 +2526,7 @@ img { max-width: 100%; height: auto; }
     <div class="max-wrap pain-inner">
       <div class="text-center" style="position:relative;z-index:2;margin-bottom:3rem">
         <div class="section-pill" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:white">Need Attention</div>
-        <h2 class="section-title" style="color:white;font-size:clamp(2rem,4vw,3rem)">Where Do You Need <span style="color:#9B6FD4">Attention?</span></h2>
+        <h2 class="section-title" style="color:white;font-size:clamp(2rem,4vw,3rem)">Where Do You Need <span style="color:#17a589">Attention?</span></h2>
         <p class="section-sub text-center" style="color:rgba(255,255,255,0.75);margin:0 auto;max-width:620px">Injuries and body pain can strike when you least expect them. At The Spine Centre, we offer personalised care for every body part — helping you manage pain, regain mobility, and recover quickly. Choose your area of concern.</p>
       </div>
       <div class="pain-grid">
@@ -2541,7 +2608,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I&#39;m thoroughly impressed with Dr. Hiren Dhacha, the young and talented physiotherapist practicing in Gandhinagar! His exceptional professionalism, combined with his noble and friendly nature, makes him a standout in his field. Dr. Dhacha&#39;s extensive knowledge and enthusiasm are evident in the way he approaches each patient&#39;s needs, providing personalized care and attention that&#39;s truly remarkable. What sets him apart is his exceptional bedside manner - he&#39;s warm, welcoming, and genuinely cares about his patients&#39; well-being. His dedication to his craft is inspiring, and his passion for physiotherapy shines through in every session. I&#39;ve had the pleasure of experiencing Dr. Dhacha&#39;s expertise firsthand, and I can confidently say that he&#39;s an asset to the medical community in Gandhinagar. If you&#39;re looking for a physiotherapist who is not only skilled but also kind, compassionate, and genuinely invested in your health, look no further than Dr. Hiren Dhacha. Five stars isn&#39;t enough - I&#39;d give him ten stars if I could!" data-short="I'm thoroughly impressed with Dr. Hiren Dhacha, the young and talented physiotherapist practicing in Gandhinagar! His exceptional professionalism, combined with his noble and friendly nature, makes him a standout in his field. Dr.…">&ldquo;I'm thoroughly impressed with Dr. Hiren Dhacha, the young and talented physiotherapist practicing in Gandhinagar! His exceptional professionalism, combined with his noble and friendly nature, makes him a standout in his field. Dr.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <img src="images/cert_uk.png" class="ta-photo" alt="Patient">
+            <div class="ta-avatar" style="background:linear-gradient(135deg,#0E7FAB,#1ABC9C);color:white">DJ</div>
             <div><div class="ta-name">Dhwani Jhatakia</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -2550,7 +2617,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session..so if you have anykind of spine problem or physio problem a must visit place.." data-short="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…">&ldquo;Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#7B4BB8">JV</div>
+            <div class="ta-avatar" style="background:#1ABC9C">JV</div>
             <div><div class="ta-name">Jay Vasava</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -2559,7 +2626,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr Hiren, who is not only extremely knowledgeable but also incredibly kind and patient. He takes the time to understand your concerns and tailors the treatment perfectly. His expertise and encouragement make a huge difference in recovery. Honestly, he’s a wonderful doctor who genuinely cares about his patients’ well-being. If you’re looking for effective treatment and someone you can trust, this is the place to go!" data-short="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…">&ldquo;I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#7B4BB8">PA</div>
+            <div class="ta-avatar" style="background:#1ABC9C">PA</div>
             <div><div class="ta-name">Parth Acharya</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -2606,7 +2673,7 @@ img { max-width: 100%; height: auto; }
     <div class="fca-orb fca-orb1"></div>
     <div class="fca-orb fca-orb2"></div>
     <div class="max-wrap" style="position:relative;z-index:1">
-      <h2 class="section-title text-center" style="color:white">Ready to Live <span style="color:#9B6FD4">Pain-Free?</span></h2>
+      <h2 class="section-title text-center" style="color:white">Ready to Live <span style="color:#17a589">Pain-Free?</span></h2>
       <p style="color:rgba(255,255,255,.75);text-align:center;font-size:1.05rem;margin-bottom:2.5rem">Book your consultation today and take the first step toward a healthier, more active life.</p>
       <div class="text-center" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
         <a href="#" onclick="showPage('booking');return false;" class="btn-white">📅 Book Appointment</a>
@@ -2634,7 +2701,7 @@ img { max-width: 100%; height: auto; }
       <!-- LEFT: Photo -->
       <div class="dr-photo-col" data-aos="fade-right">
         <div class="dr-photo-wrap">
-          <img src="images/hiren_about.png" alt="Dr. Hiren Dacha – The Spine Centre" class="dr-photo-img" style="object-position:top;object-fit:cover;">
+          <img src="images/dr_hiren_new.png" alt="Dr. Hiren Dacha – The Spine Centre" class="dr-photo-img" style="object-position:top;object-fit:cover;">
           <div class="dr-photo-badge">
             <div class="dpb-num">5</div>
             <div class="dpb-lbl">Int'l<br>Certifications</div>
@@ -2692,40 +2759,40 @@ img { max-width: 100%; height: auto; }
       <div class="tp-steps">
         <div class="tp-step" data-aos="fade-up" data-aos-delay="0">
           <div class="tp-img-wrap">
-            <img src="images/cert_uk.png" alt="International Training" style="object-position:top">
+            <img src="images/physio2.png" alt="Expert Therapist" style="object-position:top">
             <div class="tp-step-number">1</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#7B4BB8" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#7B4BB8" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#1ABC9C" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#1ABC9C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>Get Paired With A Therapist</h4>
           <p>We carefully match you with a certified physiotherapist based on your condition, goals, and preferences.</p>
         </div>
         <div class="tp-step" data-aos="fade-up" data-aos-delay="150">
           <div class="tp-img-wrap">
-            <img src="images/cert_switzerland.png" alt="Certified Technique" style="object-position:top">
+            <img src="images/dry_needling.png" alt="Advanced Techniques" style="object-position:top">
             <div class="tp-step-number">2</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 18 40 10 Q60 2 80 10" stroke="#7B4BB8" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#7B4BB8" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 18 40 10 Q60 2 80 10" stroke="#1ABC9C" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#1ABC9C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>Choose Your Preferred Way To Receive Care</h4>
           <p>Whether in-clinic or at home, we offer flexible treatment delivery that fits your schedule and comfort.</p>
         </div>
         <div class="tp-step" data-aos="fade-up" data-aos-delay="300">
           <div class="tp-img-wrap">
-            <img src="images/cert_dna_usa.png" alt="DNA USA Certified" style="object-position:top">
+            <img src="images/rehabilitation.png" alt="Rehabilitation" style="object-position:top">
             <div class="tp-step-number">3</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#7B4BB8" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#7B4BB8" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#1ABC9C" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#1ABC9C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>We Help You Get Better, Faster!</h4>
           <p>Our evidence-based methods and personalised plans ensure measurable results in the shortest time possible.</p>
         </div>
         <div class="tp-step tp-step-last" data-aos="fade-up" data-aos-delay="450">
           <div class="tp-img-wrap">
-            <img src="images/dr_clinic.png" alt="Dr. Hiren at Clinic" style="object-position:top">
+            <img src="images/dr_hiren_new.png" alt="Dr. Hiren Dacha" style="object-position:top">
             <div class="tp-step-number">4</div>
           </div>
           <h4>What Physiotherapy Can Help With</h4>
@@ -2761,11 +2828,11 @@ img { max-width: 100%; height: auto; }
   </section>
 
   <!-- QUALITY SECTION (Screenshot 1 in about) -->
-  <section class="quality-section" style="background:#F3EBFD">
+  <section class="quality-section" style="background:#e8f8f5">
     <div class="quality-inner max-wrap">
       <div class="quality-images" data-aos="fade-right">
-        <div class="qi-photo qi-photo1"><img src="images/cert_switzerland2.png" alt="International Certification" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;"></div>
-        <div class="qi-photo qi-photo2"><img src="images/cert_dna_usa2.png" alt="Dr. Hiren with international trainers" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;"></div>
+        <div class="qi-photo qi-photo1"><img src="images/craniosacral.png" alt="Craniosacral Therapy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;"></div>
+        <div class="qi-photo qi-photo2"><img src="images/cupping.png" alt="Cupping Therapy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;"></div>
         <!-- <div class="qi-stat-float"><div class="qsf-n">5000+</div><div class="qsf-l">Patients Healed</div></div> -->
       </div>
       <div class="quality-text" data-aos="fade-left">
@@ -2794,35 +2861,35 @@ img { max-width: 100%; height: auto; }
       <h2 class="section-title text-center">Trained by <span class="color-green">World-Class</span> <span class="color-navy">Experts</span></h2>
       <p class="section-sub text-center" style="margin:0 auto 2.5rem">Dr. Hiren has trained directly under internationally acclaimed physiotherapists and osteopaths from UK, Switzerland, and USA.</p>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(91,45,142,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,188,156,.12);aspect-ratio:4/3;">
           <img src="images/cert_uk.png" alt="UK Certification - Spine Action" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(91,45,142,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,188,156,.12);aspect-ratio:4/3;">
           <img src="images/patient_intl.png" alt="International Training Session" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(91,45,142,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,188,156,.12);aspect-ratio:4/3;">
           <img src="images/cert_switzerland.png" alt="FNT Switzerland Certification" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(91,45,142,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,188,156,.12);aspect-ratio:4/3;">
           <img src="images/cert_switzerland2.png" alt="Switzerland Training" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(91,45,142,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,188,156,.12);aspect-ratio:4/3;">
           <img src="images/cert_dna_usa.png" alt="DNA USA Certification" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(91,45,142,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,188,156,.12);aspect-ratio:4/3;">
           <img src="images/cert_dna_usa2.png" alt="Dynamic Neuromuscular Assessment USA" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
       </div>
       <div style="display:flex;gap:20px;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
-        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(91,45,142,.15);">
+        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(26,188,156,.15);">
           <div style="font-size:1.4rem;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif;">🇬🇧 UK</div>
           <div style="font-size:0.78rem;color:var(--muted);font-weight:600;">Osteopathic Manipulations</div>
         </div>
-        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(91,45,142,.15);">
+        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(26,188,156,.15);">
           <div style="font-size:1.4rem;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif;">🇨🇭 Switzerland</div>
           <div style="font-size:0.78rem;color:var(--muted);font-weight:600;">Functional Neuroleptic Techniques</div>
         </div>
-        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(91,45,142,.15);">
+        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(26,188,156,.15);">
           <div style="font-size:1.4rem;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif;">🇺🇸 USA</div>
           <div style="font-size:0.78rem;color:var(--muted);font-weight:600;">Dynamic Neuromuscular Assessment</div>
         </div>
@@ -2841,7 +2908,7 @@ img { max-width: 100%; height: auto; }
      CHIROPRACTIC PAGE (Screenshot 7)
 ============================== -->
 <div id="page-chiro" class="page">
-  <div class="page-header" style="background:linear-gradient(135deg,var(--navy),var(--green))">
+  <div class="page-header" style="background:linear-gradient(135deg,#0a3d55,#1ABC9C)">
     <div class="ph-breadcrumb"><a href="#" onclick="showPage('home');return false;" style="color:rgba(255,255,255,.6);text-decoration:none">Home</a> <span style="margin:0 8px;opacity:.4">/</span> <a href="#" onclick="showPage('chiro');return false;" style="color:rgba(255,255,255,.6);text-decoration:none">Service</a> <span style="margin:0 8px;opacity:.4">/</span> <span>Chiropractic Treatment</span></div>
     <h1>Chiropractic Treatment</h1>
     <p>Expert spine care to relieve pain, improve posture, and restore function.</p>
@@ -2857,7 +2924,7 @@ img { max-width: 100%; height: auto; }
         </div>
       </div>
       <div class="shs-right" data-aos="fade-left">
-        <div class="section-pill" style="background:rgba(91,45,142,.1);color:#7B4BB8">We Are The Best For</div>
+        <div class="section-pill" style="background:rgba(26,188,156,.1);color:#1ABC9C">We Are The Best For</div>
         <h2 class="section-title">We Are The Best For <span class="color-green">Chiropractic Treatment</span></h2>
         <p class="section-desc">At The Spine Centre, we offer chiropractic care designed to balance typical musculoskeletal pain and release your body's natural healing ability. Our focus is on aligning your body for optimal performance — whether you're dealing with a recent injury or a chronic condition. Using gentle adjustments and a holistic approach, we help ensure balanced and prevent long-term wellness.</p>
         <div class="shs-features">
@@ -2872,7 +2939,7 @@ img { max-width: 100%; height: auto; }
   </section>
 
   <!-- KEY BENEFITS (4 grid) -->
-  <section style="background:#F3EBFD;padding:90px 5%">
+  <section style="background:#e8f8f5;padding:90px 5%">
     <div class="max-wrap">
       <div class="section-pill" style="display:block;width:fit-content;margin:0 auto 1rem">Why Choose Us</div>
       <h2 class="section-title text-center">We Are The Best For <span class="color-green">Key Benefits</span></h2>
@@ -2935,7 +3002,7 @@ img { max-width: 100%; height: auto; }
      PHYSIOTHERAPY PAGE
 ============================== -->
 <div id="page-physio" class="page">
-  <div class="page-header" style="background:linear-gradient(135deg,#7B4BB8,#7B4BB8)">
+  <div class="page-header" style="background:linear-gradient(135deg,#1ABC9C,#1ABC9C)">
     <div class="ph-breadcrumb"><a href="#" onclick="showPage('home');return false;" style="color:rgba(255,255,255,.6);text-decoration:none">Home</a> <span style="margin:0 8px;opacity:.4">/</span> <a href="#" onclick="showPage('physio');return false;" style="color:rgba(255,255,255,.6);text-decoration:none">Service</a> <span style="margin:0 8px;opacity:.4">/</span> <span>Physiotherapy</span></div>
     <h1>Physiotherapy Services</h1>
     <p>Comprehensive rehabilitation for injury, surgery recovery, and long-term wellness.</p>
@@ -3046,7 +3113,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I&#39;m thoroughly impressed with Dr. Hiren Dhacha, the young and talented physiotherapist practicing in Gandhinagar! His exceptional professionalism, combined with his noble and friendly nature, makes him a standout in his field. Dr. Dhacha&#39;s extensive knowledge and enthusiasm are evident in the way he approaches each patient&#39;s needs, providing personalized care and attention that&#39;s truly remarkable. What sets him apart is his exceptional bedside manner - he&#39;s warm, welcoming, and genuinely cares about his patients&#39; well-being. His dedication to his craft is inspiring, and his passion for physiotherapy shines through in every session. I&#39;ve had the pleasure of experiencing Dr. Dhacha&#39;s expertise firsthand, and I can confidently say that he&#39;s an asset to the medical community in Gandhinagar. If you&#39;re looking for a physiotherapist who is not only skilled but also kind, compassionate, and genuinely invested in your health, look no further than Dr. Hiren Dhacha. Five stars isn&#39;t enough - I&#39;d give him ten stars if I could!" data-short="I'm thoroughly impressed with Dr. Hiren Dhacha, the young and talented physiotherapist practicing in Gandhinagar! His exceptional professionalism, combined with his noble and friendly nature, makes him a standout in his field. Dr.…">&ldquo;I'm thoroughly impressed with Dr. Hiren Dhacha, the young and talented physiotherapist practicing in Gandhinagar! His exceptional professionalism, combined with his noble and friendly nature, makes him a standout in his field. Dr.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#1a3a6a">DJ</div>
+            <div class="ta-avatar" style="background:#0a4c5c">DJ</div>
             <div><div class="ta-name">Dhwani Jhatakia</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3055,7 +3122,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session..so if you have anykind of spine problem or physio problem a must visit place.." data-short="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…">&ldquo;Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#7B4BB8">JV</div>
+            <div class="ta-avatar" style="background:#1ABC9C">JV</div>
             <div><div class="ta-name">Jay Vasava</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3064,7 +3131,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr Hiren, who is not only extremely knowledgeable but also incredibly kind and patient. He takes the time to understand your concerns and tailors the treatment perfectly. His expertise and encouragement make a huge difference in recovery. Honestly, he’s a wonderful doctor who genuinely cares about his patients’ well-being. If you’re looking for effective treatment and someone you can trust, this is the place to go!" data-short="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…">&ldquo;I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#7B4BB8">PA</div>
+            <div class="ta-avatar" style="background:#1ABC9C">PA</div>
             <div><div class="ta-name">Parth Acharya</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3073,7 +3140,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Dr. Hiren is by far one of the best chiropractors and physiotherapists I have ever received treatment from. His approach is highly skilled, insightful, and patient-centered. He takes the time to explain exactly what he is doing and why, in simple terms that are easy to understand. Both Dr. Hiren and Dr. Dhruvil ensure that every patient receives their complete attention and care. In my own case, I was completely bedridden due to a sports related ligament injury. Nothing seemed to help until my first session with Dr. Hiren. His guidance and evaluation gave me hope, and after just one session, I was able to walk again. I would highly recommend anyone who is even slightly hesitant to give it a try, it’s truly worth it. No matter what age group his treatment works like magic." data-short="Dr. Hiren is by far one of the best chiropractors and physiotherapists I have ever received treatment from. His approach is highly skilled, insightful, and patient-centered. He takes the time to explain exactly what he is doing an…">&ldquo;Dr. Hiren is by far one of the best chiropractors and physiotherapists I have ever received treatment from. His approach is highly skilled, insightful, and patient-centered. He takes the time to explain exactly what he is doing an…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <img src="images/cert_uk.png" class="ta-photo" alt="Patient">
+            <div class="ta-avatar" style="background:linear-gradient(135deg,#0E7FAB,#1ABC9C);color:white">DJ</div>
             <div><div class="ta-name">Shraddha Matkar</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3082,7 +3149,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Dr. Hiren Dhacha is an excellent physiotherapist. I sought his help for shoulder pain that had been bothering me for months. What stood out to me was his patient-centric approach. He didn&#39;t just treat the symptoms; he genuinely listened to my concerns and tailored a personalized treatment plan just for me. He was very encouraging throughout my recovery journey and patiently answered all my questions. My shoulder feels much better, and I&#39;m grateful for his dedicated care." data-short="Dr. Hiren Dhacha is an excellent physiotherapist. I sought his help for shoulder pain that had been bothering me for months. What stood out to me was his patient-centric approach. He didn't just treat the symptoms; he genuinely li…">&ldquo;Dr. Hiren Dhacha is an excellent physiotherapist. I sought his help for shoulder pain that had been bothering me for months. What stood out to me was his patient-centric approach. He didn't just treat the symptoms; he genuinely li…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#2a9d8f">VS</div>
+            <div class="ta-avatar" style="background:#1ABC9C">VS</div>
             <div><div class="ta-name">Vaman Shukla</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3091,7 +3158,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Dr. Hiren is excellent! He assesses each patient individually and tailors his treatment to their specific needs. His combination of physiotherapy, chiropractic therapy and other techniques gives his approach to healing a holistic quality. I had some extreme pain due to a strained Achilles tendon, but in just one session, Dr. Hiren along with Dr. Dhruvil got me from limping back to walking. I continue to see them to improve my condition and highly recommend their superb skills to everyone. Thank you, Dr. Hiren, for your amazing healing!" data-short="Dr. Hiren is excellent! He assesses each patient individually and tailors his treatment to their specific needs. His combination of physiotherapy, chiropractic therapy and other techniques gives his approach to healing a holistic…">&ldquo;Dr. Hiren is excellent! He assesses each patient individually and tailors his treatment to their specific needs. His combination of physiotherapy, chiropractic therapy and other techniques gives his approach to healing a holistic…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#9B6FD4">SR</div>
+            <div class="ta-avatar" style="background:#17a589">SR</div>
             <div><div class="ta-name">Srinivas Reddy</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3100,7 +3167,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I had a wonderful experience with Dr. Hiren, and I genuinely recommend their physiotherapy/cryopathy services. From the very first session, they took the time to understand my condition thoroughly and designed a treatment plan tailored to my specific needs." data-short="I had a wonderful experience with Dr. Hiren, and I genuinely recommend their physiotherapy/cryopathy services. From the very first session, they took the time to understand my condition thoroughly and designed a treatment plan tai…">&ldquo;I had a wonderful experience with Dr. Hiren, and I genuinely recommend their physiotherapy/cryopathy services. From the very first session, they took the time to understand my condition thoroughly and designed a treatment plan tai…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <img src="images/patient_intl.png" class="ta-photo" alt="Patient">
+            <div class="ta-avatar" style="background:linear-gradient(135deg,#0E7FAB,#17a589);color:white">MM</div>
             <div><div class="ta-name">Malabika Mukherjee</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3109,7 +3176,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I had hormonal imbalance issues which had impact on my daily life . Then I visited &#39;The Spine center&#39; and started hormonal therapy. After that I noticed a real difference in how I felt. My hormones are balanced now . Dr. Hiren was caring and professional throughout. I’m truly grateful for their support , highly recommend for hormonal issues!!" data-short="I had hormonal imbalance issues which had impact on my daily life . Then I visited 'The Spine center' and started hormonal therapy. After that I noticed a real difference in how I felt. My hormones are balanced now . Dr. Hiren was…">&ldquo;I had hormonal imbalance issues which had impact on my daily life . Then I visited 'The Spine center' and started hormonal therapy. After that I noticed a real difference in how I felt. My hormones are balanced now . Dr. Hiren was…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#1a3a6a">SJ</div>
+            <div class="ta-avatar" style="background:#0a4c5c">SJ</div>
             <div><div class="ta-name">Shivani Jambudiya</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3118,7 +3185,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I came to The Spine Center with chronic neck pain and got amazing results. The combination of chiropractic adjustments and visceral mobilization gave me real relief. Dr. Hiren is very skilled, caring, and explains everything clearly. Highly recommended!" data-short="I came to The Spine Center with chronic neck pain and got amazing results. The combination of chiropractic adjustments and visceral mobilization gave me real relief. Dr. Hiren is very skilled, caring, and explains everything clear…">&ldquo;I came to The Spine Center with chronic neck pain and got amazing results. The combination of chiropractic adjustments and visceral mobilization gave me real relief. Dr. Hiren is very skilled, caring, and explains everything clear…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <img src="images/cert_dna_usa2.png" class="ta-photo" alt="Patient">
+            <div class="ta-avatar" style="background:linear-gradient(135deg,#17a589,#1ABC9C);color:white">BB</div>
             <div><div class="ta-name">Bansi Bharai</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3127,7 +3194,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I know this is going to sound like a paid review, but trust me, it’s not. I just can’t help but appreciate the incredible skills of Dr. Hiren and Dr. Dhruvil. They are truly experts at what they do—their level of skill and precision in diagnosis is outstanding. Yes, the charges are a bit more than a general physiotherapist, but once you experience their treatment, you’ll understand why. Their expertise and the results they deliver make every penny worth it. On top of that, they are incredibly friendly, making each session comfortable and reassuring." data-short="I know this is going to sound like a paid review, but trust me, it’s not. I just can’t help but appreciate the incredible skills of Dr. Hiren and Dr. Dhruvil. They are truly experts at what they do—their level of skill and precisi…">&ldquo;I know this is going to sound like a paid review, but trust me, it’s not. I just can’t help but appreciate the incredible skills of Dr. Hiren and Dr. Dhruvil. They are truly experts at what they do—their level of skill and precisi…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#264653">AA</div>
+            <div class="ta-avatar" style="background:#0d5c6e">AA</div>
             <div><div class="ta-name">Ayush Anand</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3136,7 +3203,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I had an excellent experience with [Dr. Hiren dacha]. Their deep knowledge, careful assessment, and personalized treatment plan helped me recover faster and with confidence. They explained everything clearly and made me feel comfortable at every step. Thanks to their care, I&#39;m now pain-free and back to my routine. Highly recommend to anyone looking for a skilled and caring physiotherapist!" data-short="I had an excellent experience with [Dr. Hiren dacha]. Their deep knowledge, careful assessment, and personalized treatment plan helped me recover faster and with confidence. They explained everything clearly and made me feel comfo…">&ldquo;I had an excellent experience with [Dr. Hiren dacha]. Their deep knowledge, careful assessment, and personalized treatment plan helped me recover faster and with confidence. They explained everything clearly and made me feel comfo…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#7B4BB8">SV</div>
+            <div class="ta-avatar" style="background:#1ABC9C">SV</div>
             <div><div class="ta-name">Sidhrajsinh Vaghela</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3145,7 +3212,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="From the movement i walked in , l felt cared Dr Hiren is incredibly knowledgeable and took the time to explain my condition and treatment option. After a few session my back pain has significantly improved. Highly recommend!!!" data-short="From the movement i walked in , l felt cared Dr Hiren is incredibly knowledgeable and took the time to explain my condition and treatment option. After a few session my back pain has significantly improved. Highly recommend!!!">&ldquo;From the movement i walked in , l felt cared Dr Hiren is incredibly knowledgeable and took the time to explain my condition and treatment option. After a few session my back pain has significantly improved. Highly recommend!!!&rdquo;</p>
           
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#7B4BB8">JP</div>
+            <div class="ta-avatar" style="background:#1ABC9C">JP</div>
             <div><div class="ta-name">Jignesh Pavra</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3154,7 +3221,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I consulted Dr. Hiren Dhacha for severe back pain due to a lumbar disc protrusion, and I am incredibly grateful for the treatment I received. Through a month of physiotherapy sessions, which included effective manual therapy techniques, I have regained my mobility and am back to normal. The personalized care and expertise provided by &#39;The Spine Center&#39; were exceptional. The sessions were not only therapeutic but also educational, as he explained the exercises and techniques in detail, empowering me to continue managing my condition independently. The clinic environment was welcoming, and the staff were supportive throughout my recovery journey." data-short="I consulted Dr. Hiren Dhacha for severe back pain due to a lumbar disc protrusion, and I am incredibly grateful for the treatment I received. Through a month of physiotherapy sessions, which included effective manual therapy techn…">&ldquo;I consulted Dr. Hiren Dhacha for severe back pain due to a lumbar disc protrusion, and I am incredibly grateful for the treatment I received. Through a month of physiotherapy sessions, which included effective manual therapy techn…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#264653">MB</div>
+            <div class="ta-avatar" style="background:#0d5c6e">MB</div>
             <div><div class="ta-name">Mahek Bhamani</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3163,7 +3230,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Dr. Hiren Dacha and his is a young and energetic physiotherapist. Dr. Hiren is very much experienced physo. He knows how to treat and recover patient. I am suffering from pelvic shifting issue and due to his treatment, recovered. Even I referred many patients and they are very much grateful for his treatment. Thank you so much for your wonderful treatment 🙏" data-short="Dr. Hiren Dacha and his is a young and energetic physiotherapist. Dr. Hiren is very much experienced physo. He knows how to treat and recover patient. I am suffering from pelvic shifting issue and due to his treatment, recovered.…">&ldquo;Dr. Hiren Dacha and his is a young and energetic physiotherapist. Dr. Hiren is very much experienced physo. He knows how to treat and recover patient. I am suffering from pelvic shifting issue and due to his treatment, recovered.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#2a9d8f">DJ</div>
+            <div class="ta-avatar" style="background:#1ABC9C">DJ</div>
             <div><div class="ta-name">Dr. Mayur Joshi</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3172,7 +3239,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Dr Hiren and his colleague are amazing healers. They understand their patients very well. And have a healing touch in their hands. Dr. Hiren&#39;s assessment of his patient&#39;s complaint is bang on and correct. His ability to connect with his patient just adds on to the patient&#39;s treatment and recovery. I and my family and friends trust him completely." data-short="Dr Hiren and his colleague are amazing healers. They understand their patients very well. And have a healing touch in their hands. Dr. Hiren's assessment of his patient's complaint is bang on and correct. His ability to connect wi…">&ldquo;Dr Hiren and his colleague are amazing healers. They understand their patients very well. And have a healing touch in their hands. Dr. Hiren's assessment of his patient's complaint is bang on and correct. His ability to connect wi…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#2a9d8f">AC</div>
+            <div class="ta-avatar" style="background:#1ABC9C">AC</div>
             <div><div class="ta-name">Anshula Chaturvedi</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3181,7 +3248,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="My mother had severe back pain. She took medicine as per the doctor&#39;s advice but the progress was rarely seen. Then we came to Dr. Hiren&#39;s clinic. His treatment shows the real progress in her back pain. Specifically the exercies. Doc & his skill truly appreciated. Ofcourse, now my mother can move properly.:)" data-short="My mother had severe back pain. She took medicine as per the doctor's advice but the progress was rarely seen. Then we came to Dr. Hiren's clinic. His treatment shows the real progress in her back pain. Specifically the exercies.…">&ldquo;My mother had severe back pain. She took medicine as per the doctor's advice but the progress was rarely seen. Then we came to Dr. Hiren's clinic. His treatment shows the real progress in her back pain. Specifically the exercies.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#9B6FD4">KJ</div>
+            <div class="ta-avatar" style="background:#17a589">KJ</div>
             <div><div class="ta-name">Kirat C. Joshi</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3199,7 +3266,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I can’t thank enough for helping me with my knee pain. Their approach was tailored to my needs, and the results were incredible. The clinic is clean, the staff is friendly, and the sessions are very effective. I highly recommend them to anyone dealing with knee issue." data-short="I can’t thank enough for helping me with my knee pain. Their approach was tailored to my needs, and the results were incredible. The clinic is clean, the staff is friendly, and the sessions are very effective. I highly recommend t…">&ldquo;I can’t thank enough for helping me with my knee pain. Their approach was tailored to my needs, and the results were incredible. The clinic is clean, the staff is friendly, and the sessions are very effective. I highly recommend t…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#9B6FD4">DK</div>
+            <div class="ta-avatar" style="background:#17a589">DK</div>
             <div><div class="ta-name">Darbar Kdeepsinh</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3208,7 +3275,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I had great experience of recovery from my back pain Dr. Hiren dhacha was a very good physiotherapist. I am fully satisfied by the service provided by him. I am very much thankful to him." data-short="I had great experience of recovery from my back pain Dr. Hiren dhacha was a very good physiotherapist. I am fully satisfied by the service provided by him. I am very much thankful to him.">&ldquo;I had great experience of recovery from my back pain Dr. Hiren dhacha was a very good physiotherapist. I am fully satisfied by the service provided by him. I am very much thankful to him.&rdquo;</p>
           
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#457b9d">AL</div>
+            <div class="ta-avatar" style="background:#0E7FAB">AL</div>
             <div><div class="ta-name">Atul Limbachiya</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3217,7 +3284,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I highly recommend this clinic as one of the best chiropractic centers in Gandhinagar. My whole family has been consulting Dr. Hiren for a while now, and we have consistently received excellent care. He takes the time to understand each individual’s needs and provides personalized treatment. The results have been remarkable, and we always feel well-cared for in a comfortable and welcoming environment. If you’re looking for a chiropractor in Gandhinagar, this is the place to go!" data-short="I highly recommend this clinic as one of the best chiropractic centers in Gandhinagar. My whole family has been consulting Dr. Hiren for a while now, and we have consistently received excellent care. He takes the time to understan…">&ldquo;I highly recommend this clinic as one of the best chiropractic centers in Gandhinagar. My whole family has been consulting Dr. Hiren for a while now, and we have consistently received excellent care. He takes the time to understan…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#264653">MD</div>
+            <div class="ta-avatar" style="background:#0d5c6e">MD</div>
             <div><div class="ta-name">Morii Design</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3312,7 +3379,8 @@ img { max-width: 100%; height: auto; }
         <div class="ci-item"><div class="ci-icon">📞</div><div><div class="ci-label">Phone / WhatsApp</div><div class="ci-value"><a href="tel:+919712155905" style="color:white;text-decoration:none">+91 97121 55905</a></div></div></div>
         <div class="ci-item"><div class="ci-icon">🕐</div><div><div class="ci-label">Clinic Hours</div><div class="ci-value">Mon–Fri: 9am–1pm, 4–7:30pm<br>Sat–Sun: 9am–1:30pm, 4–7:30pm</div></div></div>
         <div class="ci-item"><div class="ci-icon">🏳️‍🌈</div><div><div class="ci-label">Inclusive Clinic</div><div class="ci-value">LGBTQ+ Friendly – All welcome here</div></div></div>
-        <a href="https://wa.me/919712155905" target="_blank" class="whatsapp-book-btn" style="margin-top:2rem;display:inline-flex">
+        <a href="https://www.instagram.com/the_spinecenter/?g=5" target="_blank" class="btn-primary" style="margin-top:1rem;display:inline-flex;background:#e4405f;font-size:0.85rem;padding:10px 18px;">📸 Follow on Instagram</a><br>
+        <a href="https://wa.me/919712155905" target="_blank" class="whatsapp-book-btn" style="margin-top:1rem;display:inline-flex">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           WhatsApp Us Now
         </a>
@@ -3356,6 +3424,7 @@ img { max-width: 100%; height: auto; }
         <a href="https://wa.me/919712155905" target="_blank" class="fs-btn">💬</a>
         <a href="https://maps.app.goo.gl/ZBrh1HeJFa8ir25aA" target="_blank" class="fs-btn">📍</a>
         <a href="tel:+919712155905" class="fs-btn">📞</a>
+        <a href="https://www.instagram.com/the_spinecenter/?g=5" target="_blank" class="fs-btn">📸</a>
       </div>
     </div>
     <div class="footer-col">
