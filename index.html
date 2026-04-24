@@ -9,21 +9,21 @@
 <style>
 /* ===== ROOT VARIABLES ===== */
 :root {
-  --navy: #1a2e4a;
-  --blue: #1a2e4a;
-  --sky: #2d6a4f;
-  --green: #2d6a4f;
-  --mint: #40916c;
-  --light-green: #d8f3dc;
-  --light: #e8f5ec;
-  --white: #ffffff;
-  --gray: #f4f7fb;
-  --mint-bg: #f0f7f4;
-  --text: #2d3748;
-  --muted: #718096;
-  --gold: #e6a817;
-  --shadow: 0 4px 24px rgba(26,46,74,0.08);
-  --shadow-lg: 0 20px 60px rgba(26,46,74,0.12);
+  --navy: #FF6B00;
+  --blue: #FF6B00;
+  --sky: #FF6B00;
+  --green: #FF6B00;
+  --mint: #FF8C38;
+  --light-green: #FFE8D6;
+  --light: #FFF0E6;
+  --white: #FDFAF7;
+  --gray: #FFF5EE;
+  --mint-bg: #FFF0E6;
+  --text: #2d2010;
+  --muted: #7a5c40;
+  --gold: #FF6B00;
+  --shadow: 0 4px 24px rgba(255,107,0,0.08);
+  --shadow-lg: 0 20px 60px rgba(255,107,0,0.12);
 }
 
 /* ===== RESET ===== */
@@ -45,8 +45,8 @@ ul { list-style:none; }
 /* ===== TYPOGRAPHY ===== */
 .section-pill {
   display:inline-flex; align-items:center;
-  background:rgba(45,106,79,.08); color:var(--green);
-  border:1px solid rgba(45,106,79,.2); border-radius:50px;
+  background:rgba(255,107,0,.08); color:var(--green);
+  border:1px solid rgba(255,107,0,.2); border-radius:50px;
   padding:6px 18px; font-size:0.8rem; font-weight:600;
   letter-spacing:0.5px; margin-bottom:1rem;
 }
@@ -66,7 +66,7 @@ ul { list-style:none; }
   font-weight:600; font-size:0.95rem; text-decoration:none;
   transition:all .3s; border:none; cursor:pointer; font-family:'DM Sans',sans-serif;
 }
-.btn-primary:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 12px 30px rgba(45,106,79,.35); }
+.btn-primary:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 12px 30px rgba(255,107,0,.35); }
 .btn-ghost {
   display:inline-flex; align-items:center; gap:8px;
   background:transparent; color:white;
@@ -111,14 +111,14 @@ ul { list-style:none; }
 /* ===== NAVBAR ===== */
 #navbar {
   position:fixed; top:0; left:0; right:0; z-index:1000;
-  background:rgba(255,255,255,.97); backdrop-filter:blur(12px);
-  box-shadow:0 2px 20px rgba(26,46,74,.07);
+  background:rgba(253,250,247,.97); backdrop-filter:blur(12px);
+  box-shadow:none;
   transition:box-shadow .3s;
 }
 .nav-inner {
   max-width:1260px; margin:0 auto;
   display:flex; align-items:center; justify-content:space-between;
-  padding:0 5%; height:72px;
+  padding:0 5%; height:90px;
 }
 .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
 .logo-circle {
@@ -139,8 +139,8 @@ ul { list-style:none; }
 .dropdown-menu {
   position:absolute; top:calc(100% + 8px); left:0;
   background:white; border-radius:16px;
-  box-shadow:0 20px 50px rgba(26,46,74,.15);
-  border:1px solid rgba(26,46,74,.06);
+  box-shadow:0 20px 50px rgba(255,107,0,.15);
+  border:1px solid rgba(255,107,0,.06);
   min-width:260px; padding:8px;
   opacity:0; visibility:hidden; transform:translateY(-8px);
   transition:all .25s; z-index:100;
@@ -166,7 +166,7 @@ ul { list-style:none; }
 .hamburger span { width:24px; height:2px; background:var(--navy); border-radius:2px; transition:.3s; display:block; }
 
 /* ===== PAGES ===== */
-.page { display:none; padding-top:72px; }
+.page { display:none; padding-top:90px; }
 .page.active { display:block; }
 
 /* ===== PAGE HEADER ===== */
@@ -181,16 +181,16 @@ ul { list-style:none; }
 /* ===== HERO ===== */
 .hero-section {
   min-height:100vh; display:flex; align-items:center;
-  background:linear-gradient(135deg,#0d1f35 0%,#1a2e4a 50%,#1a2e4a 100%);
-  position:relative; overflow:hidden; padding-top:72px;
+  background:linear-gradient(135deg,#5C2500 0%,#CC5500 50%,#FF6B00 100%);
+  position:relative; overflow:hidden; padding-top:90px;
 }
 .hero-bg-orb {
   position:absolute; border-radius:50%;
   animation:orbFloat 8s ease-in-out infinite;
 }
-.orb1 { width:600px; height:600px; right:-200px; top:50%; transform:translateY(-50%); background:radial-gradient(circle,rgba(45,106,79,.12),transparent 70%); }
-.orb2 { width:400px; height:400px; left:-100px; bottom:-100px; background:radial-gradient(circle,rgba(26,46,74,.08),transparent 70%); animation-delay:3s; }
-.orb3 { width:250px; height:250px; left:30%; top:10%; background:radial-gradient(circle,rgba(45,106,79,.06),transparent 70%); animation-delay:5s; }
+.orb1 { width:600px; height:600px; right:-200px; top:50%; transform:translateY(-50%); background:radial-gradient(circle,rgba(255,107,0,.12),transparent 70%); }
+.orb2 { width:400px; height:400px; left:-100px; bottom:-100px; background:radial-gradient(circle,rgba(255,107,0,.08),transparent 70%); animation-delay:3s; }
+.orb3 { width:250px; height:250px; left:30%; top:10%; background:radial-gradient(circle,rgba(255,107,0,.06),transparent 70%); animation-delay:5s; }
 @keyframes orbFloat { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-20px) scale(1.05)} }
 .hero-content {
   max-width:1200px; margin:0 auto; padding:80px 5%;
@@ -199,13 +199,13 @@ ul { list-style:none; }
 }
 .hero-badge {
   display:inline-flex; align-items:center; gap:8px;
-  background:rgba(45,106,79,.15); color:var(--sky);
-  border:1px solid rgba(45,106,79,.25); border-radius:50px;
+  background:rgba(255,107,0,.15); color:var(--sky);
+  border:1px solid rgba(255,107,0,.25); border-radius:50px;
   padding:7px 18px; font-size:0.8rem; font-weight:600;
   letter-spacing:0.5px; margin-bottom:1.5rem;
   animation:badgePulse 3s ease-in-out infinite;
 }
-@keyframes badgePulse { 0%,100%{box-shadow:0 0 0 0 rgba(45,106,79,.2)} 50%{box-shadow:0 0 0 8px rgba(45,106,79,0)} }
+@keyframes badgePulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,107,0,.2)} 50%{box-shadow:0 0 0 8px rgba(255,107,0,0)} }
 .hero-title {
   font-family:'Playfair Display',serif;
   font-size:clamp(2.4rem,4.5vw,3.8rem); color:white;
@@ -229,7 +229,7 @@ ul { list-style:none; }
 .hc-head { font-family:'Playfair Display',serif; font-size:1.2rem; color:white; font-weight:600; margin-bottom:1.2rem; }
 .hc-items { display:flex; flex-direction:column; gap:10px; margin-bottom:1.5rem; }
 .hc-item { display:flex; align-items:center; gap:10px; color:rgba(255,255,255,.82); font-size:0.92rem; padding:10px 14px; background:rgba(255,255,255,.05); border-radius:10px; transition:background .2s; }
-.hc-item:hover { background:rgba(45,106,79,.15); }
+.hc-item:hover { background:rgba(255,107,0,.15); }
 .hci-dot { width:8px; height:8px; background:var(--sky); border-radius:50%; flex-shrink:0; }
 .hc-btn { display:block; text-align:center; background:var(--green); color:white; padding:12px; border-radius:12px; font-weight:600; font-size:0.9rem; text-decoration:none; transition:background .2s; }
 .hc-btn:hover { background:var(--mint); }
@@ -274,7 +274,7 @@ ul { list-style:none; }
   align-items:center; justify-content:center;
   border-radius:20px; overflow:hidden;
 }
-.ph1 { background:linear-gradient(135deg,#e8f5ec,#d8f3dc); }
+.ph1 { background:linear-gradient(135deg,#FFF0E6,#FFE8D6); }
 .ph2 { background:linear-gradient(135deg,#e8f5e9,#c8e6c9); }
 .ph-emoji { font-size:3.5rem; margin-bottom:0.8rem; }
 .ph-label { font-weight:600; color:var(--navy); font-size:0.95rem; }
@@ -283,7 +283,7 @@ ul { list-style:none; }
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
   background:var(--navy); color:white; border-radius:16px;
   padding:18px 20px; text-align:center; z-index:10;
-  box-shadow:0 10px 30px rgba(26,46,74,.3);
+  box-shadow:0 10px 30px rgba(255,107,0,.3);
   animation:cardFloat 5s ease-in-out infinite;
 }
 .qsf-n { font-size:1.8rem; font-weight:800; color:var(--sky); font-family:'Playfair Display',serif; }
@@ -304,7 +304,7 @@ ul { list-style:none; }
 .mva-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:3rem; }
 .mva-card {
   background:white; border-radius:20px; padding:32px 28px;
-  box-shadow:var(--shadow); border:1px solid rgba(26,46,74,.05);
+  box-shadow:var(--shadow); border:1px solid rgba(255,107,0,.05);
   transition:transform .3s, box-shadow .3s;
 }
 .mva-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
@@ -343,7 +343,7 @@ ul { list-style:none; }
 .sh-card:nth-child(3) { grid-area:c3; min-height:460px; }
 .sh-card:nth-child(4) { grid-area:c4; }
 .sh-card:nth-child(5) { grid-area:c5; }
-.sh-card:hover { transform:translateY(-4px); box-shadow:0 24px 60px rgba(26,46,74,.2); }
+.sh-card:hover { transform:translateY(-4px); box-shadow:0 24px 60px rgba(255,107,0,.2); }
 .shc-bg-img {
   position:absolute; inset:0;
   background-image:var(--bg-url);
@@ -380,9 +380,9 @@ ul { list-style:none; }
   width:90px; height:90px; border-radius:50%; margin:0 auto 1.2rem;
   display:flex; align-items:center; justify-content:center;
   font-size:2rem; position:relative; overflow:hidden;
-  box-shadow:0 8px 24px rgba(26,46,74,.12);
+  box-shadow:0 8px 24px rgba(255,107,0,.12);
 }
-.ps-c1 { background:linear-gradient(135deg,#e8f5ec,#d8f3dc); }
+.ps-c1 { background:linear-gradient(135deg,#FFF0E6,#FFE8D6); }
 .ps-c2 { background:linear-gradient(135deg,#e8f5e9,#a5d6a7); }
 .ps-c3 { background:linear-gradient(135deg,#fff3e0,#ffcc80); }
 .ps-c4 { background:linear-gradient(135deg,#fce4ec,#f48fb1); }
@@ -398,7 +398,7 @@ ul { list-style:none; }
 .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:3rem; }
 .testi-card {
   background:white; border-radius:20px; padding:28px;
-  box-shadow:var(--shadow); border:1px solid rgba(26,46,74,.05);
+  box-shadow:var(--shadow); border:1px solid rgba(255,107,0,.05);
   transition:transform .3s, box-shadow .3s;
 }
 .testi-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
@@ -412,12 +412,12 @@ ul { list-style:none; }
 
 /* ===== FINAL CTA ===== */
 .final-cta {
-  background:linear-gradient(135deg,#0d1f35,var(--navy) 50%,#1a2e4a);
+  background:linear-gradient(135deg,#CC5500,var(--navy) 50%,#FF6B00);
   padding:100px 5%; text-align:center; position:relative; overflow:hidden;
 }
 .fca-orb { position:absolute; border-radius:50%; }
-.fca-orb1 { width:500px; height:500px; background:radial-gradient(circle,rgba(45,106,79,.1),transparent 70%); right:-100px; top:-100px; }
-.fca-orb2 { width:300px; height:300px; background:radial-gradient(circle,rgba(45,106,79,.15),transparent 70%); left:-50px; bottom:-50px; }
+.fca-orb1 { width:500px; height:500px; background:radial-gradient(circle,rgba(255,107,0,.1),transparent 70%); right:-100px; top:-100px; }
+.fca-orb2 { width:300px; height:300px; background:radial-gradient(circle,rgba(255,107,0,.15),transparent 70%); left:-50px; bottom:-50px; }
 
 /* ===== COMPASSIONATE SECTION ===== */
 .compassionate-section { padding:100px 5%; background:white; }
@@ -434,7 +434,7 @@ ul { list-style:none; }
 .comp-img-badge {
   position:absolute; bottom:-20px; right:-20px;
   background:var(--navy); border-radius:16px; padding:20px 24px;
-  text-align:center; box-shadow:0 10px 30px rgba(26,46,74,.25);
+  text-align:center; box-shadow:0 10px 30px rgba(255,107,0,.25);
   animation:cardFloat 5s ease-in-out infinite;
 }
 .cib-num { font-size:2rem; font-weight:800; color:var(--sky); font-family:'Playfair Display',serif; }
@@ -456,7 +456,7 @@ ul { list-style:none; }
 .shs-badge {
   position:absolute; bottom:-20px; left:-20px;
   background:var(--green); border-radius:16px; padding:18px 22px;
-  text-align:center; box-shadow:0 10px 30px rgba(45,106,79,.3);
+  text-align:center; box-shadow:0 10px 30px rgba(255,107,0,.3);
   animation:cardFloat 5s ease-in-out infinite;
 }
 .sb-num { font-size:1.8rem; font-weight:800; color:white; font-family:'Playfair Display',serif; }
@@ -469,7 +469,7 @@ ul { list-style:none; }
 .benefits-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:3rem; }
 .benefit-card {
   background:white; border-radius:20px; padding:32px 28px;
-  box-shadow:var(--shadow); border:1px solid rgba(26,46,74,.05);
+  box-shadow:var(--shadow); border:1px solid rgba(255,107,0,.05);
   transition:transform .3s;
 }
 .benefit-card:hover { transform:translateY(-4px); }
@@ -501,7 +501,7 @@ ul { list-style:none; }
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus,
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-  border-color:var(--green); box-shadow:0 0 0 3px rgba(45,106,79,.1); background:white;
+  border-color:var(--green); box-shadow:0 0 0 3px rgba(255,107,0,.1); background:white;
 }
 .form-group textarea { resize:vertical; min-height:100px; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
@@ -511,7 +511,7 @@ ul { list-style:none; }
   cursor:pointer; margin-top:0.5rem; transition:all .3s;
   font-family:'DM Sans',sans-serif;
 }
-.booking-submit-btn:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 10px 30px rgba(45,106,79,.3); }
+.booking-submit-btn:hover { background:var(--navy); transform:translateY(-2px); box-shadow:0 10px 30px rgba(255,107,0,.3); }
 
 /* ===== CONTACT ===== */
 .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:50px; align-items:start; }
@@ -524,7 +524,7 @@ ul { list-style:none; }
 .contact-form .form-group { margin-bottom:1rem; }
 
 /* ===== FOOTER ===== */
-footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
+footer { background:#8B3A00; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .footer-inner { display:grid; grid-template-columns:2fr 1fr 1fr 1.3fr; gap:50px; padding-bottom:50px; border-bottom:1px solid rgba(255,255,255,.07); }
 .footer-logo { display:flex; align-items:center; gap:10px; margin-bottom:1.2rem; }
 .footer-brand p { font-size:0.85rem; line-height:1.7; color:rgba(255,255,255,.45); max-width:260px; margin-bottom:1.5rem; }
@@ -560,16 +560,16 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 /* ===== CALL FLOAT ===== */
 .call-float {
   position:fixed; bottom:100px; right:28px; z-index:999;
-  width:56px; height:56px; background:#1a2e4a; border-radius:50%;
+  width:56px; height:56px; background:#FF6B00; border-radius:50%;
   display:flex; align-items:center; justify-content:center;
-  box-shadow:0 6px 24px rgba(26,46,74,.45); transition:transform .3s;
+  box-shadow:0 6px 24px rgba(255,107,0,.45); transition:transform .3s;
   text-decoration:none;
 }
 .call-float:hover { transform:scale(1.12); }
 .call-float svg { width:26px; height:26px; }
 .call-pulse {
   position:absolute; width:100%; height:100%; border-radius:50%;
-  background:rgba(26,46,74,.3); animation:waPulse 2s infinite 0.5s;
+  background:rgba(255,107,0,.3); animation:waPulse 2s infinite 0.5s;
 }
 
 /* ===== CHATBOT FLOAT ===== */
@@ -577,14 +577,14 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   position:fixed; bottom:26px; right:96px; z-index:999;
   width:56px; height:56px; background:var(--navy); border-radius:50%;
   display:flex; align-items:center; justify-content:center;
-  box-shadow:0 6px 24px rgba(26,46,74,.45); transition:transform .3s;
+  box-shadow:0 6px 24px rgba(255,107,0,.45); transition:transform .3s;
   cursor:pointer; border:none;
 }
 .chat-float:hover { transform:scale(1.12); }
 .chat-float svg { width:28px; height:28px; }
 .chat-float-badge {
   position:absolute; top:-6px; right:-6px;
-  width:18px; height:18px; background:#2d6a4f; border-radius:50%;
+  width:18px; height:18px; background:#FF6B00; border-radius:50%;
   font-size:0.65rem; font-weight:700; color:white;
   display:flex; align-items:center; justify-content:center;
   animation:badgePulse 2.5s ease-in-out infinite;
@@ -595,7 +595,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   position:fixed; bottom:100px; right:28px; z-index:1000;
   width:360px; height:520px;
   background:white; border-radius:20px;
-  box-shadow:0 20px 60px rgba(26,46,74,.22);
+  box-shadow:0 20px 60px rgba(255,107,0,.22);
   display:flex; flex-direction:column;
   overflow:hidden;
   transform:scale(0.85) translateY(20px);
@@ -608,7 +608,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   opacity:1; pointer-events:all;
 }
 .chatbot-header {
-  background:linear-gradient(135deg,var(--navy),#1a2e4a);
+  background:linear-gradient(135deg,var(--navy),#FF6B00);
   padding:16px 20px; display:flex; align-items:center; gap:12px;
   flex-shrink:0;
 }
@@ -643,7 +643,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .chat-msg.bot {
   background:white; color:var(--text);
   border-bottom-left-radius:4px;
-  box-shadow:0 2px 8px rgba(26,46,74,.08);
+  box-shadow:0 2px 8px rgba(255,107,0,.08);
   align-self:flex-start;
 }
 .chat-msg.user {
@@ -656,7 +656,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   display:flex; align-items:center; gap:4px;
   background:white; padding:10px 14px; border-radius:14px;
   border-bottom-left-radius:4px;
-  box-shadow:0 2px 8px rgba(26,46,74,.08);
+  box-shadow:0 2px 8px rgba(255,107,0,.08);
   align-self:flex-start; width:fit-content;
 }
 .chat-typing span {
@@ -806,7 +806,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   .ps-arrow { display:none; }
 }
 @media (max-width:768px) {
-  .nav-links { display:none; flex-direction:column; position:absolute; top:72px; left:0; right:0; background:white; padding:1rem 5%; box-shadow:0 10px 30px rgba(0,0,0,.1); gap:0; }
+  .nav-links { display:none; flex-direction:column; position:absolute; top:90px; left:0; right:0; background:white; padding:1rem 5%; box-shadow:0 10px 30px rgba(0,0,0,.1); gap:0; }
   .nav-links.open { display:flex; }
   .hamburger { display:flex; }
   .hero-content { grid-template-columns:1fr; padding:60px 5%; }
@@ -833,20 +833,20 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   width: 64px; height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(26,46,74,0.25);
-  box-shadow: 0 2px 12px rgba(26,46,74,0.15);
+  border: 2px solid rgba(255,107,0,0.25);
+  box-shadow: 0 2px 12px rgba(255,107,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .nav-logo:hover .nav-logo-img {
   transform: rotate(10deg) scale(1.08);
-  box-shadow: 0 6px 24px rgba(26,46,74,0.35);
+  box-shadow: 0 6px 24px rgba(255,107,0,0.35);
 }
 .footer-logo-img {
   width: 64px; height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(45,106,79,0.3);
-  box-shadow: 0 4px 20px rgba(45,106,79,0.2);
+  border: 2px solid rgba(255,107,0,0.3);
+  box-shadow: 0 4px 20px rgba(255,107,0,0.2);
   transition: transform 0.4s ease;
 }
 .footer-logo-img:hover { transform: rotate(-8deg) scale(1.05); }
@@ -863,11 +863,11 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 @keyframes pulse-ring  { 0%{transform:scale(1);opacity:.8} 100%{transform:scale(2.2);opacity:0} }
 @keyframes spin-slow   { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
 @keyframes heartbeat   { 0%,100%{transform:scale(1)} 14%{transform:scale(1.08)} 28%{transform:scale(1)} 42%{transform:scale(1.05)} }
-@keyframes borderPulse { 0%,100%{border-color:rgba(45,106,79,0.3)} 50%{border-color:rgba(45,106,79,0.8)} }
+@keyframes borderPulse { 0%,100%{border-color:rgba(255,107,0,0.3)} 50%{border-color:rgba(255,107,0,0.8)} }
 @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
 @keyframes bounceIn    { 0%{transform:scale(0.3);opacity:0} 50%{transform:scale(1.05)} 70%{transform:scale(0.95)} 100%{transform:scale(1);opacity:1} }
 @keyframes slideInFromBottom { from{transform:translateY(60px);opacity:0} to{transform:translateY(0);opacity:1} }
-@keyframes glowPulse   { 0%,100%{box-shadow:0 0 10px rgba(45,106,79,0.2)} 50%{box-shadow:0 0 30px rgba(45,106,79,0.6),0 0 60px rgba(26,46,74,0.3)} }
+@keyframes glowPulse   { 0%,100%{box-shadow:0 0 10px rgba(255,107,0,0.2)} 50%{box-shadow:0 0 30px rgba(255,107,0,0.6),0 0 60px rgba(255,107,0,0.3)} }
 
 /* ===== ENHANCED NAVBAR ===== */
 #navbar {
@@ -892,13 +892,13 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 
 /* ===== ENHANCED HERO ===== */
 .hero-section {
-  background: linear-gradient(135deg,#070f1d 0%,#0d1f35 30%,#1a2e4a 65%,#1a2e4a 100%) !important;
+  background: linear-gradient(135deg,#5C2500 0%,#CC5500 30%,#FF8C38 65%,#FF6B00 100%) !important;
 }
 .hero-section::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(45,106,79,0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 20% 80%, rgba(26,46,74,0.06) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 70% 50%, rgba(255,107,0,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(255,107,0,0.06) 0%, transparent 50%);
   pointer-events: none;
 }
 .hero-badge {
@@ -927,7 +927,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .hero-card:nth-child(3) { animation-delay: 2s; }
 .hero-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 20px 50px rgba(26,46,74,0.25) !important;
+  box-shadow: 0 20px 50px rgba(255,107,0,0.25) !important;
 }
 
 /* ===== ENHANCED BUTTONS ===== */
@@ -944,7 +944,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   opacity: 0; transition: opacity 0.3s ease;
 }
 .btn-primary:hover::before { opacity: 1; }
-.btn-primary:hover { transform: translateY(-3px) !important; box-shadow: 0 15px 40px rgba(45,106,79,0.45) !important; }
+.btn-primary:hover { transform: translateY(-3px) !important; box-shadow: 0 15px 40px rgba(255,107,0,0.45) !important; }
 .btn-book {
   transition: all 0.3s ease !important;
   position: relative; overflow: hidden;
@@ -965,7 +965,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 }
 .sh-card:hover {
   transform: translateY(-10px) scale(1.02) !important;
-  box-shadow: 0 30px 70px rgba(26,46,74,0.3) !important;
+  box-shadow: 0 30px 70px rgba(255,107,0,0.3) !important;
 }
 .shc-bg-img { transition: transform 0.7s cubic-bezier(0.4,0,0.2,1) !important; }
 .sh-card:hover .shc-bg-img { transform: scale(1.12) !important; }
@@ -976,11 +976,11 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 }
 .testi-card:hover {
   transform: translateY(-8px) !important;
-  box-shadow: 0 25px 60px rgba(26,46,74,0.18) !important;
+  box-shadow: 0 25px 60px rgba(255,107,0,0.18) !important;
 }
 .mva-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 25px 60px rgba(26,46,74,0.2) !important;
+  box-shadow: 0 25px 60px rgba(255,107,0,0.2) !important;
 }
 .benefit-card:hover { transform: translateY(-6px) !important; }
 
@@ -988,7 +988,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 .qi-photo {
   transition: transform 0.6s cubic-bezier(0.4,0,0.2,1), box-shadow 0.6s ease !important;
 }
-.qi-photo:hover { transform: scale(1.04) rotate(1deg) !important; box-shadow: 0 30px 70px rgba(26,46,74,0.25) !important; }
+.qi-photo:hover { transform: scale(1.04) rotate(1deg) !important; box-shadow: 0 30px 70px rgba(255,107,0,0.25) !important; }
 .qi-photo img { transition: transform 0.6s ease !important; }
 .qi-photo:hover img { transform: scale(1.06) !important; }
 
@@ -998,9 +998,9 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
   transition: all 0.3s ease;
 }
 .section-pill:hover {
-  background: rgba(45,106,79,0.15) !important;
+  background: rgba(255,107,0,0.15) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(45,106,79,0.2);
+  box-shadow: 0 4px 15px rgba(255,107,0,0.2);
 }
 
 /* ===== STAT CARDS ===== */
@@ -1012,7 +1012,7 @@ footer { background:#0d1f35; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 /* ===== FOOTER ENHANCED ===== */
 footer {
   position: relative;
-  background: linear-gradient(135deg, #070f1d 0%, #0d1f35 50%, #0a1929 100%) !important;
+  background: linear-gradient(135deg, #5C2500 0%, #CC5500 50%, #FF6B00 100%) !important;
 }
 footer::before {
   content: '';
@@ -1046,13 +1046,13 @@ footer::before {
 
 /* ===== PAGE HEADER ENHANCED ===== */
 .page-header {
-  background: linear-gradient(135deg, #070f1d 0%, #1a2e4a 50%, #1a2e4a 100%) !important;
+  background: linear-gradient(135deg, #3D1A00 0%, #FF6B00 50%, #FF6B00 100%) !important;
   position: relative; overflow: hidden;
 }
 .page-header::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(45,106,79,0.12) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 50%, rgba(255,107,0,0.12) 0%, transparent 60%);
 }
 .page-header h1 {
   animation: fadeInUp 0.8s ease both;
@@ -1067,7 +1067,7 @@ footer::before {
 }
 .booking-form input:focus, .booking-form select:focus {
   border-color: var(--blue) !important;
-  box-shadow: 0 0 0 4px rgba(26,46,74,0.15) !important;
+  box-shadow: 0 0 0 4px rgba(255,107,0,0.15) !important;
   transform: translateY(-1px);
 }
 
@@ -1114,7 +1114,7 @@ footer::before {
   position: fixed;
   width: 20px; height: 20px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(45,106,79,0.6), transparent 70%);
+  background: radial-gradient(circle, rgba(255,107,0,0.6), transparent 70%);
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%,-50%);
@@ -1146,7 +1146,7 @@ footer::before {
 }
 .hero-particles span {
   position: absolute; border-radius: 50%;
-  background: rgba(45,106,79,0.35);
+  background: rgba(255,107,0,0.35);
   animation: float var(--dur,6s) ease-in-out infinite;
   animation-delay: var(--delay,0s);
 }
@@ -1176,12 +1176,12 @@ footer::before {
   background: linear-gradient(135deg, var(--blue), var(--sky));
   color: white; border: none; cursor: pointer; z-index: 999;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; box-shadow: 0 4px 20px rgba(26,46,74,0.4);
+  font-size: 1.2rem; box-shadow: 0 4px 20px rgba(255,107,0,0.4);
   opacity: 0; transform: translateY(20px);
   transition: all 0.3s ease;
 }
 .scroll-top.visible { opacity: 1; transform: translateY(0); }
-.scroll-top:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(26,46,74,0.6); }
+.scroll-top:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,107,0,0.6); }
 
 /* ===== IMAGE HOVER OVERLAY ===== */
 .sh-card .shc-overlay {
@@ -1190,13 +1190,13 @@ footer::before {
 
 /* ===== ENHANCED FOOTER BOTTOM ===== */
 .footer-bottom {
-  background: linear-gradient(90deg, rgba(45,106,79,0.05), transparent, rgba(45,106,79,0.05));
+  background: linear-gradient(90deg, rgba(255,107,0,0.05), transparent, rgba(255,107,0,0.05));
   border-top: 1px solid rgba(255,255,255,0.06) !important;
 }
 
 /* ===== GLOW ON SECTION PILLS ===== */
 .section-pill {
-  box-shadow: 0 2px 12px rgba(45,106,79,0.12);
+  box-shadow: 0 2px 12px rgba(255,107,0,0.12);
   transition: all 0.3s ease;
 }
 
@@ -1225,7 +1225,7 @@ footer::before {
 }
 .pain-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(10,20,40,0.92) 0%, rgba(26,46,74,0.88) 50%, rgba(30,73,118,0.85) 100%);
+  background: linear-gradient(135deg, rgba(10,20,40,0.92) 0%, rgba(255,107,0,0.88) 50%, rgba(30,73,118,0.85) 100%);
 }
 .pain-inner { position: relative; z-index: 2; }
 .pain-grid {
@@ -1249,19 +1249,19 @@ footer::before {
 .pain-item::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(45,106,79,0.12), rgba(26,46,74,0.08));
+  background: linear-gradient(135deg, rgba(255,107,0,0.12), rgba(255,107,0,0.08));
   opacity: 0; transition: opacity 0.3s ease;
 }
 .pain-item:hover::before { opacity: 1; }
-.pain-item:hover { color: #40916c; transform: translateX(4px); }
+.pain-item:hover { color: #FF8C38; transform: translateX(4px); }
 .pain-item:nth-child(3n) { border-right: none; }
 .pain-item-wide {
   grid-column: span 1;
 }
 .pain-icon {
   width: 42px; height: 42px;
-  background: rgba(45,106,79,0.15);
-  border: 1px solid rgba(45,106,79,0.25);
+  background: rgba(255,107,0,0.15);
+  border: 1px solid rgba(255,107,0,0.25);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -1269,8 +1269,8 @@ footer::before {
 }
 .pain-icon svg { width: 24px; height: 24px; }
 .pain-item:hover .pain-icon {
-  background: rgba(45,106,79,0.3);
-  border-color: rgba(45,106,79,0.6);
+  background: rgba(255,107,0,0.3);
+  border-color: rgba(255,107,0,0.6);
   transform: scale(1.1) rotate(5deg);
 }
 
@@ -1296,7 +1296,7 @@ footer::before {
   width: 10px; height: 10px; border-radius: 50%;
   background: var(--navy);
   display: inline-block;
-  box-shadow: 0 0 0 4px rgba(26,46,74,0.1);
+  box-shadow: 0 0 0 4px rgba(255,107,0,0.1);
 }
 .tp-steps {
   display: grid;
@@ -1320,12 +1320,12 @@ footer::before {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
-  box-shadow: 0 8px 30px rgba(26,46,74,0.18);
+  box-shadow: 0 8px 30px rgba(255,107,0,0.18);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .tp-step:hover .tp-img-wrap img {
   transform: scale(1.08);
-  box-shadow: 0 16px 50px rgba(26,46,74,0.28);
+  box-shadow: 0 16px 50px rgba(255,107,0,0.28);
 }
 .tp-step-number {
   position: absolute;
@@ -1336,7 +1336,7 @@ footer::before {
   color: white; font-weight: 700; font-size: 0.8rem;
   display: flex; align-items: center; justify-content: center;
   border: 2px solid white;
-  box-shadow: 0 4px 12px rgba(45,106,79,0.4);
+  box-shadow: 0 4px 12px rgba(255,107,0,0.4);
   transition: transform 0.3s ease;
 }
 .tp-step:hover .tp-step-number { transform: scale(1.2) rotate(10deg); }
@@ -1394,8 +1394,8 @@ img { max-width: 100%; height: auto; }
   .nav-inner { gap: 8px; }
   .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0;
     background: white; flex-direction: column; padding: 20px 24px;
-    box-shadow: 0 12px 40px rgba(26,46,74,.14); z-index: 998;
-    border-top: 2px solid rgba(26,46,74,.1); gap: 4px; }
+    box-shadow: 0 12px 40px rgba(255,107,0,.14); z-index: 998;
+    border-top: 2px solid rgba(255,107,0,.1); gap: 4px; }
   .nav-links.open { display: flex !important; }
   .nav-link { padding: 12px 0; border-bottom: 1px solid #f0f4f8; font-size: 1rem; }
   .nav-link:last-child { border-bottom: none; }
@@ -1519,8 +1519,8 @@ img { max-width: 100%; height: auto; }
   background: white;
   border-radius: 20px;
   padding: 28px;
-  box-shadow: 0 4px 24px rgba(26,46,74,.07);
-  border: 1px solid rgba(26,46,74,.06);
+  box-shadow: 0 4px 24px rgba(255,107,0,.07);
+  border: 1px solid rgba(255,107,0,.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex; flex-direction: column; gap: 12px;
   position: relative; overflow: hidden;
@@ -1528,13 +1528,13 @@ img { max-width: 100%; height: auto; }
 .testi-card::before {
   content: 'C';
   position: absolute; top: -10px; right: 20px;
-  font-size: 7rem; color: rgba(26,46,74,.06);
+  font-size: 7rem; color: rgba(255,107,0,.06);
   font-family: Georgia, serif; line-height: 1;
   pointer-events: none;
 }
-.testi-card:hover { transform: translateY(-8px) !important; box-shadow: 0 20px 60px rgba(26,46,74,.14) !important; }
+.testi-card:hover { transform: translateY(-8px) !important; box-shadow: 0 20px 60px rgba(255,107,0,.14) !important; }
 .featured-testi {
-  border: 2px solid rgba(45,106,79,.25) !important;
+  border: 2px solid rgba(255,107,0,.25) !important;
   background: linear-gradient(160deg, #f9fffc, white) !important;
 }
 .featured-testi::after {
@@ -1669,14 +1669,14 @@ img { max-width: 100%; height: auto; }
 /* ===== DR. HIREN PROFILE SECTION ===== */
 .dr-profile-section {
   padding: 100px 5%;
-  background: linear-gradient(160deg, #f8fbff 0%, #f0f7f4 100%);
+  background: linear-gradient(160deg, #f8fbff 0%, #FFF0E6 100%);
   position: relative; overflow: hidden;
 }
 .dr-profile-section::before {
   content: '';
   position: absolute; top: -60px; right: -60px;
   width: 400px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(45,106,79,0.07), transparent 70%);
+  background: radial-gradient(circle, rgba(255,107,0,0.07), transparent 70%);
   pointer-events: none;
 }
 .dr-profile-inner {
@@ -1691,7 +1691,7 @@ img { max-width: 100%; height: auto; }
 .dr-photo-img {
   width: 100%; aspect-ratio: 4/5; object-fit: cover;
   border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(26,46,74,0.18);
+  box-shadow: 0 20px 60px rgba(255,107,0,0.18);
   display: block;
   transition: transform 0.5s ease;
 }
@@ -1701,8 +1701,8 @@ img { max-width: 100%; height: auto; }
   position: absolute; bottom: 24px; left: -20px;
   background: white;
   border-radius: 16px; padding: 14px 20px;
-  box-shadow: 0 8px 30px rgba(26,46,74,0.18);
-  text-align: center; border: 2px solid rgba(45,106,79,0.2);
+  box-shadow: 0 8px 30px rgba(255,107,0,0.18);
+  text-align: center; border: 2px solid rgba(255,107,0,0.2);
   animation: float 4s ease-in-out infinite;
 }
 .dpb-num {
@@ -1718,7 +1718,7 @@ img { max-width: 100%; height: auto; }
   background: linear-gradient(135deg, var(--green), var(--mint));
   color: white; font-size: 0.78rem; font-weight: 700;
   padding: 8px 16px; border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(45,106,79,0.35);
+  box-shadow: 0 4px 16px rgba(255,107,0,0.35);
 }
 
 .dr-subtitle {
@@ -1739,11 +1739,11 @@ img { max-width: 100%; height: auto; }
 .dr-qual-item {
   display: flex; align-items: flex-start; gap: 12px;
   background: white; border-radius: 12px; padding: 12px 16px;
-  border: 1px solid rgba(26,46,74,.07);
-  box-shadow: 0 2px 10px rgba(26,46,74,.05);
+  border: 1px solid rgba(255,107,0,.07);
+  box-shadow: 0 2px 10px rgba(255,107,0,.05);
   transition: all 0.3s ease;
 }
-.dr-qual-item:hover { transform: translateX(6px); border-color: rgba(45,106,79,0.3); box-shadow: 0 4px 20px rgba(26,46,74,.1); }
+.dr-qual-item:hover { transform: translateX(6px); border-color: rgba(255,107,0,0.3); box-shadow: 0 4px 20px rgba(255,107,0,.1); }
 .dqi-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: linear-gradient(135deg, var(--blue), var(--sky));
@@ -1759,12 +1759,12 @@ img { max-width: 100%; height: auto; }
 .dr-stat {
   text-align: center; padding: 16px 20px;
   background: white; border-radius: 14px;
-  border: 1px solid rgba(26,46,74,.08);
-  box-shadow: 0 4px 16px rgba(26,46,74,.07);
+  border: 1px solid rgba(255,107,0,.08);
+  box-shadow: 0 4px 16px rgba(255,107,0,.07);
   flex: 1; min-width: 80px;
   transition: all 0.3s ease;
 }
-.dr-stat:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(26,46,74,.12); }
+.dr-stat:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(255,107,0,.12); }
 .drs-num {
   font-size: 1.5rem; font-weight: 800;
   background: linear-gradient(135deg, var(--blue), var(--sky));
@@ -1801,7 +1801,7 @@ img { max-width: 100%; height: auto; }
   min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
-  padding-top: 72px !important;  /* navbar height */
+  padding-top: 90px !important;  /* navbar height */
 }
 .hero-section::before { display: none !important; }
 .hero-bg-orb { display: none !important; }
@@ -1825,10 +1825,10 @@ img { max-width: 100%; height: auto; }
 
 .hero-slide-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(26,46,74,0.08);
+  background: rgba(255,107,0,0.08);
   color: var(--green); font-size: 0.82rem; font-weight: 700;
   padding: 8px 18px; border-radius: 40px;
-  border: 1px solid rgba(26,46,74,0.2);
+  border: 1px solid rgba(255,107,0,0.2);
   margin-bottom: 1.4rem;
   transition: all 0.4s ease;
   letter-spacing: .3px;
@@ -1844,13 +1844,13 @@ img { max-width: 100%; height: auto; }
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .hero-accent {
-  background: linear-gradient(135deg, #2d6a4f, #f77f00);
+  background: linear-gradient(135deg, #FF6B00, #f77f00);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 /* override old gradient-text on hero */
 .hero-title .gradient-text {
-  background: linear-gradient(135deg, #2d6a4f, #f77f00) !important;
+  background: linear-gradient(135deg, #FF6B00, #f77f00) !important;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
@@ -1866,22 +1866,22 @@ img { max-width: 100%; height: auto; }
 .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .hero-btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  background: linear-gradient(135deg, #2d6a4f, #1a2e4a);
+  background: linear-gradient(135deg, #FF6B00, #FF6B00);
   color: white; font-weight: 700; font-size: 0.95rem;
   padding: 14px 28px; border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(45,106,79,0.4);
+  box-shadow: 0 8px 24px rgba(255,107,0,0.4);
   transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
 }
-.hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(45,106,79,0.4); }
+.hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(255,107,0,0.4); }
 .hero-btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
   background: white; color: #0d1b2a; font-weight: 700; font-size: 0.95rem;
   padding: 13px 26px; border-radius: 50px;
-  border: 2px solid rgba(26,46,74,0.3); text-decoration: none;
+  border: 2px solid rgba(255,107,0,0.3); text-decoration: none;
   transition: all 0.3s ease;
 }
-.hero-btn-ghost:hover { border-color: #2d6a4f; color: #2d6a4f; transform: translateY(-3px); }
+.hero-btn-ghost:hover { border-color: #FF6B00; color: #FF6B00; transform: translateY(-3px); }
 
 /* Stats */
 .hero-stats { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
@@ -1898,7 +1898,7 @@ img { max-width: 100%; height: auto; }
   transition: all 0.3s ease;
   border: none; padding: 0;
 }
-.hero-dot.active { width: 24px; border-radius: 4px; background: #2d6a4f; }
+.hero-dot.active { width: 24px; border-radius: 4px; background: #FF6B00; }
 
 /* ── RIGHT COLUMN – oval image carousel ── */
 .hero-right {
@@ -1911,7 +1911,7 @@ img { max-width: 100%; height: auto; }
 .hero-oval-pill {
   position: absolute;
   width: 380px; height: 500px;
-  background: linear-gradient(160deg, #e8f5ec, #d8f3dc);
+  background: linear-gradient(160deg, #FFF0E6, #FFE8D6);
   border-radius: 200px;
   top: 50%; left: 50%; transform: translate(-46%, -50%);
   z-index: 0;
@@ -1922,7 +1922,7 @@ img { max-width: 100%; height: auto; }
   width: 340px; height: 460px;
   border-radius: 180px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(45,106,79,0.4), 0 8px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 30px 80px rgba(255,107,0,0.4), 0 8px 24px rgba(0,0,0,0.1);
   z-index: 1;
   flex-shrink: 0;
 }
@@ -1957,7 +1957,7 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   transition: all 0.25s ease;
 }
-.hero-arrow:hover { background: #2d6a4f; color: white; transform: translateY(-50%) scale(1.1); }
+.hero-arrow:hover { background: #FF6B00; color: white; transform: translateY(-50%) scale(1.1); }
 .hero-arrow-prev { left: -18px; }
 .hero-arrow-next { right: -18px; }
 
@@ -1973,13 +1973,13 @@ img { max-width: 100%; height: auto; }
 }
 .oval-badge-top {
   top: 30px; left: -40px;
-  background: linear-gradient(135deg,#2d6a4f,#1a2e4a);
+  background: linear-gradient(135deg,#FF6B00,#FF6B00);
   color: white;
   animation: float 3.5s ease-in-out infinite;
 }
 .oval-badge-bot {
   bottom: 30px; left: -30px;
-  border: 2px solid #2d6a4f; color: #2d6a4f;
+  border: 2px solid #FF6B00; color: #FF6B00;
   animation: float 3.5s ease-in-out infinite 1s;
 }
 
@@ -2201,17 +2201,17 @@ img { max-width: 100%; height: auto; }
       <h2 class="section-title text-center">We're a <span class="color-green">Recognized</span> &amp; Trusted Leader in<br>Restoring Strength and Confidence</h2>
       <div class="mva-cards" data-aos="fade-up">
         <div class="mva-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L17 10L24 11L19 16L20.5 23L14 20L7.5 23L9 16L4 11L11 10L14 4Z" stroke="#1a2e4a" stroke-width="1.5" fill="none"/></svg></div>
+          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L17 10L24 11L19 16L20.5 23L14 20L7.5 23L9 16L4 11L11 10L14 4Z" stroke="#FF6B00" stroke-width="1.5" fill="none"/></svg></div>
           <h3>Our Mission</h3>
           <p>To deliver evidence-based, personalized care in physiotherapy and chiropractic that empowers individuals and families to live healthier, more fulfilling lives. Whether it's relieving chronic pain, improving spinal alignment — we're committed to your unique journey.</p>
         </div>
         <div class="mva-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1a2e4a" stroke-width="1.5"/><circle cx="14" cy="14" r="4" fill="#1a2e4a" opacity=".3"/><path d="M14 4V8M14 20V24M4 14H8M20 14H24" stroke="#1a2e4a" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#FF6B00" stroke-width="1.5"/><circle cx="14" cy="14" r="4" fill="#FF6B00" opacity=".3"/><path d="M14 4V8M14 20V24M4 14H8M20 14H24" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Our Vision</h3>
           <p>To be Gandhinagar's most trusted centre for spine health and sports rehabilitation — where cutting-edge international techniques meet genuine, patient-centred compassionate care.</p>
         </div>
         <div class="mva-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22L14 6L22 22" stroke="#1a2e4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 17H19" stroke="#1a2e4a" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="mva-card-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22L14 6L22 22" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 17H19" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Our Approach</h3>
           <p>We focus on root-cause solutions across all our services. From hands-on physiotherapy to precise chiropractic adjustments — our care is deeply personalized, research-driven, and results-focused. Every treatment is designed for long-term progress, not quick fixes.</p>
         </div>
@@ -2347,7 +2347,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session..so if you have anykind of spine problem or physio problem a must visit place.." data-short="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…">&ldquo;Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#1a2e4a">JV</div>
+            <div class="ta-avatar" style="background:#FF6B00">JV</div>
             <div><div class="ta-name">Jay Vasava</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -2356,7 +2356,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr Hiren, who is not only extremely knowledgeable but also incredibly kind and patient. He takes the time to understand your concerns and tailors the treatment perfectly. His expertise and encouragement make a huge difference in recovery. Honestly, he’s a wonderful doctor who genuinely cares about his patients’ well-being. If you’re looking for effective treatment and someone you can trust, this is the place to go!" data-short="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…">&ldquo;I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#1a2e4a">PA</div>
+            <div class="ta-avatar" style="background:#FF6B00">PA</div>
             <div><div class="ta-name">Parth Acharya</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -2375,7 +2375,7 @@ img { max-width: 100%; height: auto; }
     <div class="max-wrap pain-inner">
       <div class="text-center" style="position:relative;z-index:2;margin-bottom:3rem">
         <div class="section-pill" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:white">Need Attention</div>
-        <h2 class="section-title" style="color:white;font-size:clamp(2rem,4vw,3rem)">Where Do You Need <span style="color:#40916c">Attention?</span></h2>
+        <h2 class="section-title" style="color:white;font-size:clamp(2rem,4vw,3rem)">Where Do You Need <span style="color:#FF8C38">Attention?</span></h2>
         <p class="section-sub text-center" style="color:rgba(255,255,255,0.75);margin:0 auto;max-width:620px">Injuries and body pain can strike when you least expect them. At The Spine Centre, we offer personalised care for every body part — helping you manage pain, regain mobility, and recover quickly. Choose your area of concern.</p>
       </div>
       <div class="pain-grid">
@@ -2460,7 +2460,7 @@ img { max-width: 100%; height: auto; }
             <div class="tp-step-number">1</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#2d6a4f" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#2d6a4f" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#FF6B00" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>Get Paired With A Therapist</h4>
           <p>We carefully match you with a certified physiotherapist based on your condition, goals, and preferences.</p>
@@ -2471,7 +2471,7 @@ img { max-width: 100%; height: auto; }
             <div class="tp-step-number">2</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 18 40 10 Q60 2 80 10" stroke="#2d6a4f" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#2d6a4f" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 18 40 10 Q60 2 80 10" stroke="#FF6B00" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>Choose Your Preferred Way To Receive Care</h4>
           <p>Whether in-clinic or at home, we offer flexible treatment delivery that fits your schedule and comfort.</p>
@@ -2482,7 +2482,7 @@ img { max-width: 100%; height: auto; }
             <div class="tp-step-number">3</div>
           </div>
           <div class="tp-arrow">
-            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#2d6a4f" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#2d6a4f" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 80 20" fill="none"><path d="M0 10 Q20 2 40 10 Q60 18 80 10" stroke="#FF6B00" stroke-width="2" stroke-dasharray="6 4"/><polyline points="70,5 80,10 70,15" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </div>
           <h4>We Help You Get Better, Faster!</h4>
           <p>Our evidence-based methods and personalised plans ensure measurable results in the shortest time possible.</p>
@@ -2535,7 +2535,7 @@ img { max-width: 100%; height: auto; }
     <div class="fca-orb fca-orb1"></div>
     <div class="fca-orb fca-orb2"></div>
     <div class="max-wrap" style="position:relative;z-index:1">
-      <h2 class="section-title text-center" style="color:white">Ready to Live <span style="color:#40916c">Pain-Free?</span></h2>
+      <h2 class="section-title text-center" style="color:white">Ready to Live <span style="color:#FF8C38">Pain-Free?</span></h2>
       <p style="color:rgba(255,255,255,.75);text-align:center;font-size:1.05rem;margin-bottom:2.5rem">Book your consultation today and take the first step toward a healthier, more active life.</p>
       <div class="text-center" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
         <a href="#" onclick="showPage('booking');return false;" class="btn-white">📅 Book Appointment</a>
@@ -2608,7 +2608,7 @@ img { max-width: 100%; height: auto; }
   </section>
 
   <!-- THERAPY PROCESS (Screenshot 4 in about) -->
-  <section class="process-section" style="background:#f0f7f4">
+  <section class="process-section" style="background:#FFF0E6">
     <div class="max-wrap">
       <div class="section-pill" style="display:block;width:fit-content;margin:0 auto 1rem">Therapy Process</div>
       <h2 class="section-title text-center">Our <span class="color-green">Therapy</span> <span class="color-navy">Process</span></h2>
@@ -2667,7 +2667,7 @@ img { max-width: 100%; height: auto; }
   </section>
 
   <!-- QUALITY SECTION (Screenshot 1 in about) -->
-  <section class="quality-section" style="background:#f0f7f4">
+  <section class="quality-section" style="background:#FFF0E6">
     <div class="quality-inner max-wrap">
       <div class="quality-images" data-aos="fade-right">
         <div class="qi-photo qi-photo1"><img src="images/cert_switzerland2.png" alt="International Certification" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;"></div>
@@ -2700,35 +2700,35 @@ img { max-width: 100%; height: auto; }
       <h2 class="section-title text-center">Trained by <span class="color-green">World-Class</span> <span class="color-navy">Experts</span></h2>
       <p class="section-sub text-center" style="margin:0 auto 2.5rem">Dr. Hiren has trained directly under internationally acclaimed physiotherapists and osteopaths from UK, Switzerland, and USA.</p>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,46,74,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(255,107,0,.12);aspect-ratio:4/3;">
           <img src="images/cert_uk.png" alt="UK Certification - Spine Action" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,46,74,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(255,107,0,.12);aspect-ratio:4/3;">
           <img src="images/patient_intl.png" alt="International Training Session" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,46,74,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(255,107,0,.12);aspect-ratio:4/3;">
           <img src="images/cert_switzerland.png" alt="FNT Switzerland Certification" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,46,74,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(255,107,0,.12);aspect-ratio:4/3;">
           <img src="images/cert_switzerland2.png" alt="Switzerland Training" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,46,74,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(255,107,0,.12);aspect-ratio:4/3;">
           <img src="images/cert_dna_usa.png" alt="DNA USA Certification" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(26,46,74,.12);aspect-ratio:4/3;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(255,107,0,.12);aspect-ratio:4/3;">
           <img src="images/cert_dna_usa2.png" alt="Dynamic Neuromuscular Assessment USA" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
       </div>
       <div style="display:flex;gap:20px;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
-        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(45,106,79,.15);">
+        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(255,107,0,.15);">
           <div style="font-size:1.4rem;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif;">🇬🇧 UK</div>
           <div style="font-size:0.78rem;color:var(--muted);font-weight:600;">Osteopathic Manipulations</div>
         </div>
-        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(45,106,79,.15);">
+        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(255,107,0,.15);">
           <div style="font-size:1.4rem;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif;">🇨🇭 Switzerland</div>
           <div style="font-size:0.78rem;color:var(--muted);font-weight:600;">Functional Neuroleptic Techniques</div>
         </div>
-        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(45,106,79,.15);">
+        <div style="background:var(--mint-bg);border-radius:12px;padding:14px 24px;text-align:center;border:1px solid rgba(255,107,0,.15);">
           <div style="font-size:1.4rem;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif;">🇺🇸 USA</div>
           <div style="font-size:0.78rem;color:var(--muted);font-weight:600;">Dynamic Neuromuscular Assessment</div>
         </div>
@@ -2763,7 +2763,7 @@ img { max-width: 100%; height: auto; }
         </div>
       </div>
       <div class="shs-right" data-aos="fade-left">
-        <div class="section-pill" style="background:rgba(45,106,79,.1);color:#2d6a4f">We Are The Best For</div>
+        <div class="section-pill" style="background:rgba(255,107,0,.1);color:#FF6B00">We Are The Best For</div>
         <h2 class="section-title">We Are The Best For <span class="color-green">Chiropractic Treatment</span></h2>
         <p class="section-desc">At The Spine Centre, we offer chiropractic care designed to balance typical musculoskeletal pain and release your body's natural healing ability. Our focus is on aligning your body for optimal performance — whether you're dealing with a recent injury or a chronic condition. Using gentle adjustments and a holistic approach, we help ensure balanced and prevent long-term wellness.</p>
         <div class="shs-features">
@@ -2778,7 +2778,7 @@ img { max-width: 100%; height: auto; }
   </section>
 
   <!-- KEY BENEFITS (4 grid) -->
-  <section style="background:#f0f7f4;padding:90px 5%">
+  <section style="background:#FFF0E6;padding:90px 5%">
     <div class="max-wrap">
       <div class="section-pill" style="display:block;width:fit-content;margin:0 auto 1rem">Why Choose Us</div>
       <h2 class="section-title text-center">We Are The Best For <span class="color-green">Key Benefits</span></h2>
@@ -2841,7 +2841,7 @@ img { max-width: 100%; height: auto; }
      PHYSIOTHERAPY PAGE
 ============================== -->
 <div id="page-physio" class="page">
-  <div class="page-header" style="background:linear-gradient(135deg,#1a2e4a,#1a2e4a)">
+  <div class="page-header" style="background:linear-gradient(135deg,#FF6B00,#FF6B00)">
     <div class="ph-breadcrumb"><a href="#" onclick="showPage('home');return false;" style="color:rgba(255,255,255,.6);text-decoration:none">Home</a> <span style="margin:0 8px;opacity:.4">/</span> <a href="#" onclick="showPage('physio');return false;" style="color:rgba(255,255,255,.6);text-decoration:none">Service</a> <span style="margin:0 8px;opacity:.4">/</span> <span>Physiotherapy</span></div>
     <h1>Physiotherapy Services</h1>
     <p>Comprehensive rehabilitation for injury, surgery recovery, and long-term wellness.</p>
@@ -2961,7 +2961,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session..so if you have anykind of spine problem or physio problem a must visit place.." data-short="Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…">&ldquo;Thank you Dr.Hiren Dhacha for caring..I highly recommended the spine center it’s truly one of the most amazing physiotherapy place. The care and attention provided is perfect..seriously feels really relaxed after a single session.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#1a2e4a">JV</div>
+            <div class="ta-avatar" style="background:#FF6B00">JV</div>
             <div><div class="ta-name">Jay Vasava</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -2970,7 +2970,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr Hiren, who is not only extremely knowledgeable but also incredibly kind and patient. He takes the time to understand your concerns and tailors the treatment perfectly. His expertise and encouragement make a huge difference in recovery. Honestly, he’s a wonderful doctor who genuinely cares about his patients’ well-being. If you’re looking for effective treatment and someone you can trust, this is the place to go!" data-short="I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…">&ldquo;I highly recommend The Spine Center—it’s truly one of the best places for physiotherapy. The care and attention they provide is exceptional, and the environment is very professional yet welcoming. A special mention goes to the Dr…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#1a2e4a">PA</div>
+            <div class="ta-avatar" style="background:#FF6B00">PA</div>
             <div><div class="ta-name">Parth Acharya</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -2997,7 +2997,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="Dr. Hiren is excellent! He assesses each patient individually and tailors his treatment to their specific needs. His combination of physiotherapy, chiropractic therapy and other techniques gives his approach to healing a holistic quality. I had some extreme pain due to a strained Achilles tendon, but in just one session, Dr. Hiren along with Dr. Dhruvil got me from limping back to walking. I continue to see them to improve my condition and highly recommend their superb skills to everyone. Thank you, Dr. Hiren, for your amazing healing!" data-short="Dr. Hiren is excellent! He assesses each patient individually and tailors his treatment to their specific needs. His combination of physiotherapy, chiropractic therapy and other techniques gives his approach to healing a holistic…">&ldquo;Dr. Hiren is excellent! He assesses each patient individually and tailors his treatment to their specific needs. His combination of physiotherapy, chiropractic therapy and other techniques gives his approach to healing a holistic…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#40916c">SR</div>
+            <div class="ta-avatar" style="background:#FF8C38">SR</div>
             <div><div class="ta-name">Srinivas Reddy</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3042,7 +3042,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I had an excellent experience with [Dr. Hiren dacha]. Their deep knowledge, careful assessment, and personalized treatment plan helped me recover faster and with confidence. They explained everything clearly and made me feel comfortable at every step. Thanks to their care, I&#39;m now pain-free and back to my routine. Highly recommend to anyone looking for a skilled and caring physiotherapist!" data-short="I had an excellent experience with [Dr. Hiren dacha]. Their deep knowledge, careful assessment, and personalized treatment plan helped me recover faster and with confidence. They explained everything clearly and made me feel comfo…">&ldquo;I had an excellent experience with [Dr. Hiren dacha]. Their deep knowledge, careful assessment, and personalized treatment plan helped me recover faster and with confidence. They explained everything clearly and made me feel comfo…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#2d6a4f">SV</div>
+            <div class="ta-avatar" style="background:#FF6B00">SV</div>
             <div><div class="ta-name">Sidhrajsinh Vaghela</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3051,7 +3051,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="From the movement i walked in , l felt cared Dr Hiren is incredibly knowledgeable and took the time to explain my condition and treatment option. After a few session my back pain has significantly improved. Highly recommend!!!" data-short="From the movement i walked in , l felt cared Dr Hiren is incredibly knowledgeable and took the time to explain my condition and treatment option. After a few session my back pain has significantly improved. Highly recommend!!!">&ldquo;From the movement i walked in , l felt cared Dr Hiren is incredibly knowledgeable and took the time to explain my condition and treatment option. After a few session my back pain has significantly improved. Highly recommend!!!&rdquo;</p>
           
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#1a2e4a">JP</div>
+            <div class="ta-avatar" style="background:#FF6B00">JP</div>
             <div><div class="ta-name">Jignesh Pavra</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3087,7 +3087,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="My mother had severe back pain. She took medicine as per the doctor&#39;s advice but the progress was rarely seen. Then we came to Dr. Hiren&#39;s clinic. His treatment shows the real progress in her back pain. Specifically the exercies. Doc & his skill truly appreciated. Ofcourse, now my mother can move properly.:)" data-short="My mother had severe back pain. She took medicine as per the doctor's advice but the progress was rarely seen. Then we came to Dr. Hiren's clinic. His treatment shows the real progress in her back pain. Specifically the exercies.…">&ldquo;My mother had severe back pain. She took medicine as per the doctor's advice but the progress was rarely seen. Then we came to Dr. Hiren's clinic. His treatment shows the real progress in her back pain. Specifically the exercies.…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#40916c">KJ</div>
+            <div class="ta-avatar" style="background:#FF8C38">KJ</div>
             <div><div class="ta-name">Kirat C. Joshi</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3105,7 +3105,7 @@ img { max-width: 100%; height: auto; }
           <p class="testi-text" data-full="I can’t thank enough for helping me with my knee pain. Their approach was tailored to my needs, and the results were incredible. The clinic is clean, the staff is friendly, and the sessions are very effective. I highly recommend them to anyone dealing with knee issue." data-short="I can’t thank enough for helping me with my knee pain. Their approach was tailored to my needs, and the results were incredible. The clinic is clean, the staff is friendly, and the sessions are very effective. I highly recommend t…">&ldquo;I can’t thank enough for helping me with my knee pain. Their approach was tailored to my needs, and the results were incredible. The clinic is clean, the staff is friendly, and the sessions are very effective. I highly recommend t…&rdquo;</p>
           <button class="testi-more" onclick="toggleReview(this)">Read more</button>
           <div class="testi-author">
-            <div class="ta-avatar" style="background:#40916c">DK</div>
+            <div class="ta-avatar" style="background:#FF8C38">DK</div>
             <div><div class="ta-name">Darbar Kdeepsinh</div><div class="ta-role">🌐 Google Review</div></div>
           </div>
         </div>
@@ -3409,11 +3409,7 @@ function showToast(msg) {
 // ===== NAVBAR SCROLL SHADOW =====
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
-  if (window.scrollY > 30) {
-    nav.style.boxShadow = '0 4px 30px rgba(26,46,74,.15)';
-  } else {
-    nav.style.boxShadow = '0 2px 20px rgba(26,46,74,.07)';
-  }
+  nav.style.boxShadow = 'none';
   // trigger AOS on scroll
   checkAOS();
 });
@@ -3613,16 +3609,9 @@ if (glow) {
 // ===== NAVBAR SCROLL GLASSMORPHISM =====
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
-  const scrollY = window.scrollY;
-  if (scrollY > 50) {
-    nav.style.background = 'rgba(255,255,255,0.97)';
-    nav.style.backdropFilter = 'blur(20px)';
-    nav.style.boxShadow = '0 4px 30px rgba(26,46,74,.18)';
-  } else {
-    nav.style.background = 'rgba(255,255,255,0.97)';
-    nav.style.backdropFilter = 'blur(12px)';
-    nav.style.boxShadow = '0 2px 20px rgba(26,46,74,.07)';
-  }
+  nav.style.background = 'rgba(253,250,247,0.97)';
+  nav.style.backdropFilter = 'blur(20px)';
+  nav.style.boxShadow = 'none';
 });
 
 // ===== MAGNETIC BUTTON EFFECT =====
