@@ -182,7 +182,7 @@ ul { list-style:none; }
 .hamburger:hover { background:var(--navy); }
 
 /* ===== PAGES ===== */
-.page { display:none; padding-top:72px; }
+.page { display:none; padding-top:76px; }
 .page.active { display:block; }
 
 /* ===== PAGE HEADER ===== */
@@ -198,7 +198,7 @@ ul { list-style:none; }
 .hero-section {
   min-height:100vh; display:flex; align-items:center;
   background:linear-gradient(135deg,#0a3d55 0%,#0E7FAB 50%,#1ABC9C 100%);
-  position:relative; overflow:hidden; padding-top:72px;
+  position:relative; overflow:hidden; padding-top:0;
 }
 .hero-bg-orb {
   position:absolute; border-radius:50%;
@@ -1483,7 +1483,7 @@ img { max-width: 100%; height: auto; }
   .hero-title { font-size: clamp(2rem, 4vw, 3rem); }
 }
 @media (max-width: 768px) {
-  .hero-section { padding: 100px 20px 60px; }
+  .hero-section { padding: 40px 20px 60px; }
   .hero-content { flex-direction: column; text-align: center; gap: 40px; }
   .hero-left, .hero-right { width: 100%; }
   .hero-btns { justify-content: center; flex-wrap: wrap; }
@@ -1861,7 +1861,7 @@ img { max-width: 100%; height: auto; }
   min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
-  padding-top: 120px !important;  /* navbar height */
+  padding-top: 0 !important;  /* navbar height handled by .page */
 }
 .hero-section::before { display: none !important; }
 .hero-bg-orb { display: none !important; }
@@ -2096,8 +2096,8 @@ img { max-width: 100%; height: auto; }
 /* Nav height responsive */
 @media (max-width: 768px) {
   .nav-inner { height: 64px !important; padding: 0 16px !important; }
-  .page { padding-top: 64px !important; }
-  .hero-section { padding-top: 64px !important; }
+  .page { padding-top: 76px !important; }
+  .hero-section { padding-top: 0 !important; }
   .nav-book-btn { padding: 7px 12px !important; font-size: 0.75rem !important; }
 }
 @media (max-width: 380px) {
