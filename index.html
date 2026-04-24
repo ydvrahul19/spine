@@ -2097,6 +2097,48 @@ img { max-width: 100%; height: auto; }
 .call-float:hover .fab-label,
 .chat-float:hover .fab-label { opacity: 1; }
 @media (max-width: 600px) { .fab-label { display: none; } }
+
+/* ===== HERO CLINIC BRAND (Pure Chiropractic style) ===== */
+.hero-clinic-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 1.8rem;
+}
+.hero-brand-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+.hero-brand-words {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.95;
+}
+.hbw-line1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 400;
+  color: white;
+  letter-spacing: -0.5px;
+}
+.hbw-line2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #1ABC9C;
+  letter-spacing: -0.5px;
+  margin-top: -4px;
+}
+@media (max-width: 768px) {
+  .hero-clinic-brand { gap: 12px; margin-bottom: 1.2rem; }
+  .hero-brand-logo { width: 52px; height: 52px; }
+  .hbw-line1, .hbw-line2 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+}
 </style>
 </head>
 <body>
@@ -2151,6 +2193,14 @@ img { max-width: 100%; height: auto; }
 
       <!-- LEFT: dynamic content (updates with each slide) -->
       <div class="hero-left" id="heroLeft">
+        <!-- CLINIC NAME — Pure Chiropractic style large branding -->
+        <div class="hero-clinic-brand">
+          <img src="images/logo.jpg" alt="The Spine Centre" class="hero-brand-logo">
+          <div class="hero-brand-words">
+            <span class="hbw-line1">The Spine</span>
+            <span class="hbw-line2">Centre</span>
+          </div>
+        </div>
         <div class="hero-slide-badge" id="heroBadge">🏥 Gandhinagar's Premier Spine &amp; Physio Clinic</div>
         <h1 class="hero-title" id="heroTitle">Relieve Pain.<br><span class="hero-accent">Restore Motion.</span><br>Reclaim Life.</h1>
         <p class="hero-sub" id="heroSub">Non-surgical solutions for back pain, neck strain, and joint issues — led by Dr. Hiren Dacha (MPT, Sports Medicine) at The Spine Centre, Niramay Medical Hub, Sector 6, Gandhinagar.</p>
