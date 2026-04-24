@@ -122,7 +122,7 @@ ul { list-style:none; }
   padding:0 4%; height:72px;
   gap: 20px; overflow:visible;
 }
-.nav-logo { display:flex; flex-direction:column; align-items:center; text-align:center; gap:2px; text-decoration:none; flex-shrink:0; }
+.nav-logo { display:flex; flex-direction:row; align-items:center; text-align:left; gap:8px; text-decoration:none; flex-shrink:0; }
 .logo-circle {
   width:40px; height:40px; background:var(--light);
   border-radius:10px; display:flex; align-items:center; justify-content:center;
@@ -898,12 +898,13 @@ footer { background:#2E1060; color:rgba(255,255,255,.65); padding:70px 5% 0; }
 
 /* ===== LOGO STYLES ===== */
 .nav-logo-img {
-  width: 46px; height: 46px;
-  border-radius: 12px;
+  width: 36px; height: 36px;
+  border-radius: 8px;
   object-fit: cover;
   border: none;
   box-shadow: 0 2px 10px rgba(14,127,171,0.12);
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 .nav-logo:hover .nav-logo-img {
   transform: rotate(10deg) scale(1.08);
@@ -1234,15 +1235,15 @@ footer::before {
 .nav-logo-img { display: block; }
 .nav-brand-text { display:flex; flex-direction:column; line-height:1; }
 .nav-brand-name {
-  font-weight:800; font-size:1.1rem; color:#0E7FAB;
+  font-weight:800; font-size:0.95rem; color:#0E7FAB;
   letter-spacing:0.3px; font-family:'Playfair Display',serif;
-  line-height:1.1;
+  line-height:1.1; white-space:nowrap;
 }
 .nav-brand-tagline {
-  font-weight:400; font-size:0.68rem; color:#666;
-  letter-spacing:2px; margin-top:3px; text-transform:uppercase;
+  font-weight:400; font-size:0.6rem; color:#666;
+  letter-spacing:1.5px; margin-top:2px; text-transform:uppercase; white-space:nowrap;
 }
-@media(max-width:480px){.nav-brand-text{display:none;}}
+@media(max-width:600px){.nav-brand-tagline{display:none;} .nav-brand-name{font-size:0.88rem;}}
 
 /* ===== SCROLL TO TOP BUTTON ===== */
 
@@ -1465,9 +1466,9 @@ img { max-width: 100%; height: auto; }
   .nav-link:last-child { border-bottom: none; }
   .hamburger { display: flex !important; }
   .nav-cta { display: none; }
-  .nav-logo-img { width: 36px; height: 36px; border-radius: 8px; }
-  .nav-brand-name { font-size: 0.92rem; }
-  .nav-brand-tagline { font-size: 0.58rem; letter-spacing: 1px; }
+  .nav-logo-img { width: 30px; height: 30px; border-radius: 6px; }
+  .nav-brand-name { font-size: 0.82rem; }
+  .nav-brand-tagline { display: none; }
 }
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
@@ -2227,10 +2228,12 @@ img { max-width: 100%; height: auto; }
 <div class="cursor-glow" id="cursorGlow"></div>
 <nav id="navbar">
   <div class="nav-inner">
-    <a class="nav-logo" href="#" onclick="showPage('home')" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;text-decoration:none;">
+    <a class="nav-logo" href="#" onclick="showPage('home')">
       <img src="images/logo.jpg" alt="The Spine Centre" class="nav-logo-img">
-      <span class="nav-brand-name">The Spine Centre</span>
-      <span class="nav-brand-tagline">Physiotherapy · Chiropractic · Rehab</span>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">The Spine Centre</span>
+        <span class="nav-brand-tagline">Physiotherapy · Chiropractic · Rehab</span>
+      </div>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#" onclick="showPage('home');return false;" class="nav-link">Home</a></li>
@@ -4187,7 +4190,11 @@ function showToast(msg) {
 // ===== NAVBAR SCROLL SHADOW =====
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
-  nav.style.boxShadow = 'none';
+  if (window.scrollY > 10) {
+    nav.style.boxShadow = '0 2px 20px rgba(14,127,171,0.12)';
+  } else {
+    nav.style.boxShadow = '0 2px 20px rgba(14,127,171,0.08)';
+  }
   // trigger AOS on scroll
   checkAOS();
 });
@@ -4387,9 +4394,11 @@ if (glow) {
 // ===== NAVBAR SCROLL GLASSMORPHISM =====
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
-  nav.style.background = 'rgba(253,250,255,0.97)';
-  nav.style.backdropFilter = 'blur(20px)';
-  nav.style.boxShadow = 'none';
+  nav.style.background = '#ffffff';
+  nav.style.backdropFilter = 'none';
+  nav.style.boxShadow = window.scrollY > 10
+    ? '0 2px 20px rgba(14,127,171,0.14)'
+    : '0 2px 20px rgba(14,127,171,0.08)';
 });
 
 // ===== MAGNETIC BUTTON EFFECT =====
