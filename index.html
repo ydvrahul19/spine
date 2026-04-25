@@ -2644,10 +2644,150 @@ img { max-width: 100%; height: auto; }
     </div>
   </section>
 
+<!-- ===== WHERE DO YOU NEED ATTENTION ===== -->
+<section class="pain-section">
+    <div class="pain-bg-img"></div>
+    <div class="pain-overlay"></div>
+    <div class="max-wrap pain-inner">
+      <div class="text-center" style="position:relative;z-index:2;margin-bottom:3rem">
+        <div class="section-pill" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:white">Need Attention</div>
+        <h2 class="section-title" style="color:white;font-size:clamp(2rem,4vw,3rem)">Where Do You Need <span style="color:#17a589">Attention?</span></h2>
+        <p class="section-sub text-center" style="color:rgba(255,255,255,0.75);margin:0 auto;max-width:620px">Injuries and body pain can strike when you least expect them. At The Spine Centre, we offer personalised care for every body part — helping you manage pain, regain mobility, and recover quickly. Choose your area of concern.</p>
+      </div>
 
+      <!-- TWO COLUMN TABLE -->
+      <div style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:860px;margin:0 auto;" class="attention-table-grid">
+
+        <!-- Available Treatment -->
+        <div style="background:rgba(255,255,255,0.10);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.22);border-radius:20px;overflow:hidden;">
+          <div style="background:rgba(255,255,255,0.15);padding:16px 28px;border-bottom:1px solid rgba(255,255,255,0.15);">
+            <h3 style="color:white;font-size:1.05rem;font-weight:800;letter-spacing:0.5px;text-decoration:underline;text-underline-offset:5px;">Available Treatment :</h3>
+          </div>
+          <div style="padding:10px 0;">
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Back and Neck Pain</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Slip Disc</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Sciatica</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Knee Pain</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Ligament Tear</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Migraine / Vertigo</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Sports Injuries</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Tennis Elbow</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')" style="border-bottom:none;">
+              <span class="attn-dash">—</span>
+              <span>Shoulder Injuries</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advanced Treatment -->
+        <div style="background:rgba(255,255,255,0.10);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.22);border-radius:20px;overflow:hidden;">
+          <div style="background:rgba(255,255,255,0.15);padding:16px 28px;border-bottom:1px solid rgba(255,255,255,0.15);">
+            <h3 style="color:white;font-size:1.05rem;font-weight:800;letter-spacing:0.5px;text-decoration:underline;text-underline-offset:5px;">Advanced Treatment :</h3>
+          </div>
+          <div style="padding:10px 0;">
+            <div class="attn-row" onclick="showPage('chiro')">
+              <span class="attn-dash">—</span>
+              <span>Spine Alignment</span>
+            </div>
+            <div class="attn-row" onclick="showPage('chiro')">
+              <span class="attn-dash">—</span>
+              <span>Chiropractic Adjustment</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Muscle Balancing</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Stress Management</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Dry-Needling Therapy</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Tapping</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')">
+              <span class="attn-dash">—</span>
+              <span>Exercise Therapy</span>
+            </div>
+            <div class="attn-row" onclick="showPage('physio')" style="border-bottom:none;">
+              <span class="attn-dash">—</span>
+              <span>Cupping Therapy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <style>
+        .attn-row {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          padding: 13px 28px;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          color: white;
+          font-size: 0.92rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.25s ease;
+          position: relative;
+        }
+        .attn-row:hover {
+          background: rgba(255,255,255,0.1);
+          padding-left: 36px;
+          color: #17a589;
+        }
+        .attn-dash {
+          color: #17a589;
+          font-weight: 700;
+          font-size: 1rem;
+          flex-shrink: 0;
+        }
+        @media(max-width:600px){
+          .attention-table-grid { grid-template-columns: 1fr !important; }
+        }
+      </style>
+
+      <!-- Book CTA below table -->
+      <div style="position:relative;z-index:2;text-align:center;margin-top:2.5rem;">
+        <a href="#" onclick="showPage('booking');return false;" class="btn-primary" style="display:inline-flex;gap:8px;align-items:center;background:white;color:#0E7FAB;font-weight:700;">
+          📅 Book Appointment
+        </a>
+      </div>
+
+    </div>
+  </section>
  
   <!-- ===== WHERE DO YOU NEED ATTENTION ===== -->
-  <section class="pain-section">
+  <!-- <section class="pain-section">
     <div class="pain-bg-img"></div>
     <div class="pain-overlay"></div>
     <div class="max-wrap pain-inner">
@@ -2719,7 +2859,7 @@ img { max-width: 100%; height: auto; }
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
    <!-- TESTIMONIALS PREVIEW -->
   <section class="testimonials-section">
